@@ -114,6 +114,7 @@ nav a{
 /* CONFIG DO TAMANHO E ESPAÇO ENTRE LINHA DO NOVO DA EMPRESA */
 .conteudo-banner h1{
     font-size: 70px;
+    font-family:'Caprasimo';
 }
 
 /* PALAVRA DE IMPACTO DO NOVO PRODUTO */
@@ -121,12 +122,14 @@ nav a{
     font-size: 38px ;
     text-align: center;
     line-height:30px;
+    font-family: 'lemonada';
 }
 
 /* QUAL É O PRODUTO */
 .conteudo-banner h2{
     font-size: 60px;
     line-height:60px;
+    font-family:'Caprasimo';
 }
 
 /* config botão vcaixa pai centralizar */
