@@ -85,7 +85,7 @@ nav a{
 
 /* alinhar textto do inicio na caixa pai e criar a sombra em cima da foto */
 .novo-produto{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(./img/Bolo\ de\ chocolate\ com\ recheio\ cremoso.png);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(./img/Bolo\ de\ chocolate\ com\ recheio\ cremoso.png);
     background-size: cover;
     background-position: center;
     width: 100%;
