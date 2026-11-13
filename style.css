@@ -15,48 +15,177 @@
     text-decoration: none;
 }
 
+/* tamanho do corpo da pagina */
 body{
     width: 100%;
+    background-color:#a65d2f ;
 }
 
+/* Container que segura o header e a onda juntos no topo */
+.topo-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* configurações do rodape */
 header{
+    background-color: #cb6ce6;
+    color: white;
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
-    background-color: #cb6ce6;
 
-    height: 128px;
-    align-items: center;
-    padding: 15px 40px;
+    padding: 10px 40px;
 }
 
+/* Controla a altura da onda para não tampar a imagem */
+.onda-header {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+
+/* color as paginas no canto direito */
+nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 20px;
+    margin-right: 3%;font-size: 26px;
+    margin-top: 2.5%;
+}
+
+/* colocar cor nos nomes da pagina e tirar o link em baixo */
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px;
+
+    margin-top: 5%;
+}
+
+/* posição e tamanho da logo no rodape */
 .logo-header img{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     padding: 5px;
     margin-left: 25%;
-}
-
-
-nav a{
-    padding: 40px;
-    margin-left: 56%;
-
-    color: #ffffff;
-    padding: 20px;
-    font-size: 18px;
-}
-
-.pgs {
+    margin-top: 20%;
 }
 
 
 
 
+/* alinhar textto do inicio na caixa pai e criar a sombra em cima da foto */
 .novo-produto{
-    background-image: url(./img/Bolo\ de\ chocolate\ com\ recheio\ cremoso.png);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(./img/Bolo\ de\ chocolate\ com\ recheio\ cremoso.png);
     background-size: cover;
-    width: auto;
-    height: 80vh;
+    background-position: center;
+    width: 100%;
+    height: 85vh;
+
+
+    /* Alinha o texto dentro do banner */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
+
+/* texto do produto novo CAIXA PAIXA */
+.conteudo-banner{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ffffff;
+
+    width: 100%;
+    margin-top: 180px;
+
+}
+
+/* CONFIG DO TAMANHO E ESPAÇO ENTRE LINHA DO NOVO DA EMPRESA */
+.conteudo-banner h1{
+    font-size: 70px;
+}
+
+/* PALAVRA DE IMPACTO DO NOVO PRODUTO */
+.conteudo-banner h3{
+    font-size: 38px ;
+    text-align: center;
+    line-height:30px;
+}
+
+/* QUAL É O PRODUTO */
+.conteudo-banner h2{
+    font-size: 60px;
+    line-height:60px;
+}
+
+/* config botão vcaixa pai centralizar */
+
+/* config para botão ser utilizavel  */
+.btn-pedido-inicio{
+    display: inline-block;
+    align-self: center;
+    margin-top: 5%;
+    border: none;
+    border-radius: 14px;
+    padding: 14px 280px;
+    font-weight: bold;
+    font-size: 20px;
+
+    background-color: #cb6ce6;
+    color: #ffffff;
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+a{
+    cursor: pointer;
+}
+
+/* config imagem;selo de novidade SOMBRA  */
+.selo-fundo img{
+    display: flex;
+
+    align-items: left;
+    justify-content: left;
+    margin-left: 1%;
+    margin-top: -18%;
+
+    width: 350px;
+    height: 350px;
+}
+
+/* config imagem;selo de novidade FRENTE  */
+.selo-frente img{
+    display: flex;
+
+    align-items: left;
+    justify-content: left;
+    margin-left: 6%;
+    margin-top: -12%;
+
+    width: 130px;
+    transform: rotate(-30deg);
+}
+
+/* efeitos  */
+
+nav a:hover{
+    color: #e7915b;
+    border-bottom: 2px solid #e7915b;
+}
+
+
+
