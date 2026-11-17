@@ -8,6 +8,9 @@
 @import url('https://fonts.cdnfonts.com/css/caprasimo'); /*FONTE PARA TITULOS*/
 
 
+
+
+/* #4b2928 - cor para o header */
 *{
     margin: 0%;
     padding: 0%;
@@ -32,7 +35,7 @@ body{
 
 /* configurações do rodape */
 header{
-    background-color: #cb6ce6;
+    background-color: #77554c;
     color: white;
     width: 100%;
 
@@ -40,13 +43,14 @@ header{
     justify-content: space-between;
 
     padding: 10px 40px;
+    text-align: 10px;
 }
 
 /* Controla a altura da onda para não tampar a imagem */
 .onda-header {
     display: block;
     width: 100%;
-    height: 80px;
+    height: 54px;
 }
 
 
@@ -56,17 +60,16 @@ nav{
     gap: 20px;
     align-items: center;
     padding-left: 20px;
-    margin-right: 3%;font-size: 26px;
+    margin-right: 1%;
     margin-top: 2.5%;
+    font-size: 22px;
 }
 
 /* colocar cor nos nomes da pagina e tirar o link em baixo */
 nav a{
     color: #ffffff;
     text-decoration: none;
-    padding: 20px;
-
-    margin-top: 5%;
+    padding: 5px;
 }
 
 /* posição e tamanho da logo no rodape */
@@ -89,7 +92,7 @@ nav a{
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 85vh;
+    height: 120vh;
 
 
     /* Alinha o texto dentro do banner */
@@ -164,7 +167,7 @@ a{
     align-items: left;
     justify-content: left;
     margin-left: 1%;
-    margin-top: -18%;
+    margin-top: -22%;
 
     width: 350px;
     height: 350px;
@@ -176,11 +179,13 @@ a{
 
     align-items: left;
     justify-content: left;
-    margin-left: 6%;
-    margin-top: -12%;
+    margin-left: 8%;
+    margin-top: -18%;
 
     width: 130px;
     transform: rotate(-30deg);
+
+    margin-bottom: 50px;
 }
 
 /* efeitos  */
@@ -189,6 +194,138 @@ nav a:hover{
     color: #e7915b;
     border-bottom: 2px solid #e7915b;
 }
+
+/* SEGUNDA SESSÃO CONFIGURAÇÕES */
+
+/* configurações caixa pai da segunda sessão */
+
+.sessão-historia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 210vh;
+    margin-top: 7%;
+
+    margin-bottom: 5%;
+}
+.historia{
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+
+    gap: 5%;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 90%;
+}
+
+/* configurações caixa filho de texto */
+#text-historia{
+    text-align: center;
+    width: 40%;
+}
+
+/* estilo do subtitulo da historia */
+#text-historia h2{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+/* estilo do titulo da historia */
+#text-historia h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #eec4d8;
+    font-weight: 800;
+}
+
+/* estilo do paragrafo da historia */
+#text-historia p{
+    text-align: center;
+    font-size: 30px;
+}
+
+/* tamanho da caixa pai da foto */
+#imagem-historia{
+    width: 40%;
+}
+
+/* tamanho da foto */
+#imagem-historia img{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+/* caixa pai do botão */
+.sobre-nos{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+
+    margin-top: 20px;
+}
+
+/* config de cor tamanho do botão estilo */
+.sobre-nos button{
+    padding: 5px 100px;
+    border-radius: 8px;
+    border: none;
+
+    color: #ffffff;
+    background-color: #cb6ce6;
+    font-weight: 800;
+}
+
+
+/* terceira sessão */
+
+/* config do titulo e  */
+.pedidos{
+    background-color: #eec4d8;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pedidos span{
+    color: #f24798;
+
+}
+
+/* config caixa pai dos pedidos */
+
+.mais-pedidos{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.pedido{
+    margin: 50px;
+    width: 50%;
+    height: 400px;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #77554c;
+}
+
+
 
 
 
