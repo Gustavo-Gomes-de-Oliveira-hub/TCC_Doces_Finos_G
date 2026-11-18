@@ -62,7 +62,7 @@ nav{
     padding-left: 20px;
     margin-right: 1%;
     margin-top: 2.5%;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 /* colocar cor nos nomes da pagina e tirar o link em baixo */
@@ -135,8 +135,8 @@ nav a{
     font-family:'Caprasimo';
 }
 
-/* config botão vcaixa pai centralizar */
 
+/* config botão vcaixa pai centralizar */
 /* config para botão ser utilizavel  */
 .btn-pedido-inicio{
     display: inline-block;
@@ -188,17 +188,14 @@ a{
     margin-bottom: 50px;
 }
 
-/* efeitos  */
-
+/* efeitos do nav */
 nav a:hover{
     color: #e7915b;
     border-bottom: 2px solid #e7915b;
 }
 
 /* SEGUNDA SESSÃO CONFIGURAÇÕES */
-
 /* configurações caixa pai da segunda sessão */
-
 .sessão-historia{
     display: flex;
     justify-content: center;
@@ -237,7 +234,7 @@ nav a:hover{
 
 /* estilo do titulo da historia */
 #text-historia h1{
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 10px;
     color: #eec4d8;
     font-weight: 800;
@@ -275,30 +272,41 @@ nav a:hover{
 
 /* config de cor tamanho do botão estilo */
 .sobre-nos button{
-    padding: 5px 100px;
-    border-radius: 8px;
+    padding: 14px 140px;
+    border-radius: 14px;
     border: none;
 
     color: #ffffff;
     background-color: #cb6ce6;
     font-weight: 800;
+    font-size: 15px;
 }
 
 
 /* terceira sessão */
-
-/* config do titulo e  */
+/* config do titulo e caixa total da sesão */
 .pedidos{
     background-color: #eec4d8;
     color: #ffffff;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    padding-top: 60px;     
+    padding-bottom: 60px; 
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
+/* tamanho do titulo */
+
+.pedidos h1{
+    font-size: 50px;
+}
+
+/* cor da letra de destaque  */
 .pedidos span{
     color: #f24798;
-
 }
 
 /* config caixa pai dos pedidos */
@@ -313,19 +321,213 @@ nav a:hover{
     margin: 20px;
 }
 
+/* deixa a caixa do produto e texto juntos */
+.contatiner-pedido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 30%;
+    margin: 15px;
+}
+
+/* config das caixas filho marrom com a imagem */
 .pedido{
-    margin: 50px;
-    width: 50%;
+    display: flex;
+    margin: 15px;
+    width: 100%;
     height: 400px;
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+
+    overflow: hidden; /*serve para cortar qualquer conteudo que ultrapasse os limites de tamanho de um elemento container */
+}
+
+/* tamanho da imagem e config */
+.pedido img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* para não deformar a imagem */
+}
+
+/* config do texto dos produtos */
+.contatiner-pedido p{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+
+    margin-top: 15px;
+}
+
+/* config do botão de mais produtos */
+
+/* caixa pai do botão */
+.produtos-saber{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+
+    margin-top: 40px;
+    margin-bottom:20px;
+}
+
+/* config de cor tamanho do botão estilo */
+.produtos-saber button{
+    padding: 14px 180px;
+    border-radius: 14px;
+    border: none;
+
+    color: #ffffff;
+    background-color: #cb6ce6;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+/* quarta sessão */
+
+/* configuração da sessão total  */
+.feedbacks{
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding-top: 34px;     
+    padding-bottom: 60px; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* tamanho do texto */
+.feedbacks h1{
+    font-size: 50px;
+}
+
+/* configurações de espaço da caixa pai da foto e depoimento */
+.feedback{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+
+    gap:100px;
+    margin-top: 24px;
+
+    background-color: #f1dcc3;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* config da caixa dos depoimentos */
+.depoimento{
+    width: 50%;
+    height: 300px;
+
+    background-color: #77554c;
+    padding: 20px 30px;
+    color: #ffffff;
+    border-radius: 18px;
+    
+}
+
+/* organtinação dos titulos */
+/* nome do cliente */
+.depoimento h1{
+    text-align: left;
+}
+
+/* @ do cliente */
+.depoimento h3{
+    text-align: left;
+}
+
+/* comentario do cliente. */
+.depoimento p{
+    margin-top: 22px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* confi da imagem  */
+.cliente img{
+
+    width:400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+/* quinta sessão */
+
+/* sessão tamanho e cor */
+.mapa-ft{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1dcc3;
 
     justify-content: center;
     align-items: center;
     text-align: center;
 
-    background-color: #77554c;
+    padding: 50px 20px 60px 20px;
 }
 
+/* caixa pai do endereço e foto */
+.inf-endereço{
+    display: flex;
+    flex-direction: row;
 
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 90%;
 
+    margin-bottom: 20px;
+}
 
+/* config do mapa */
+/* caixa pai */
+.mapa-loja{
+    width: 50%;
+    height: 500px;
+    margin-top: 30px;
+}
+
+/* config do link do mapa */
+.mapa{
+    width: 90%;
+    height:100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0  25px #000;
+    
+}
+
+/* imagem preenchendo 100% da caixa */
+.mont-loja{
+    width: 50%;
+    height: 500px;
+    background-color: #a65d2f;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0  25px #000;
+    margin-top: 30px;
+}
+
+.mont-loja img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher todo o espaço sem esticar/deformar */
+    display: block;
+}
+
+.mapa.ft{
+}
 
