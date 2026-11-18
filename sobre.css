@@ -1,0 +1,130 @@
+/* #4b2928 - cor para o header */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+main{
+    view-transition-name: pagina;
+}
+
+/* tamanho do corpo da pagina */
+body{
+    width: 100%;
+    background-color:#a65d2f ;
+}
+
+/* Container que segura o header e a onda juntos no topo */
+.topo-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* configurações do rodape */
+header{
+    background-color: #77554c;
+    color: white;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 40px;
+    text-align: 10px;
+}
+
+/* Controla a altura da onda para não tampar a imagem */
+.onda-header {
+    display: block;
+    width: 100%;
+    height: 54px;
+}
+
+
+/* color as paginas no canto direito */
+nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 20px;
+    margin-right: 1%;
+    margin-top: 2.5%;
+    font-size: 22px;
+}
+
+/* colocar cor nos nomes da pagina e tirar o link em baixo */
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* posição e tamanho da logo no rodape */
+.logo-header img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 5px;
+    margin-left: 25%;
+    margin-top: 20%;
+}
+
+/*BANNER*/
+
+.banner{
+    margin-top: 11%;
+    background-image: url(./img/Bolo\ de\ chocolate\ com\ recheio\ cremoso.png);
+    color:#ffffff;
+    width: 100%;
+    height: 452px;
+    background-size:cover;
+    padding: 70px 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*TRANSIÇÃO DE PÁGINA*/
+
+@view-transition{
+    navigation: auto;
+}
+
+@keyframes saindo{
+    to{
+    transform: translateX(100%);
+    }
+}
+
+@keyframes entrando{
+    from{
+    transform: translateX(-100%);
+    }
+}
+
+::view-transition-group(pagina){
+    animation-duration: 1s;
+}
+
+::view-transition-old(pagina){
+    animation-name: saindo;
+}
+::view-transition-new(pagina){
+    animation-name: entrando;
+}
