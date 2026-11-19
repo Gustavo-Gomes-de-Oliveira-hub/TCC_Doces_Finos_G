@@ -1,3 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/trocchi-2'); /*FONTE PARA PARAGRAFOS*/
+
+
+@import url('https://fonts.cdnfonts.com/css/lemonada'); /*FONTE PARA SUBTITULOS*/
+
+
+@import url('https://fonts.cdnfonts.com/css/caprasimo'); /*FONTE PARA TITULOS*/
+
+
 /* #4b2928 - cor para o header */
 *{
     margin: 0%;
@@ -88,12 +97,77 @@ nav a{
 
 }
 
+/*PARTE PRINCIPAL DA PÁGINA*/
+
+.infos-gerais{
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 50px;
+}
+
+/*H2 e P DA PARTE PRINCIPAL*/
+
+.infos-gerais h2{
+    font-family: 'caprasimo';
+    font-size: 70px;
+    color: #cb6ce6;
+}
+
+.infos-gerais p{
+    font-family: 'trocchi';
+    font-size: 27px;
+}
+
+
+
+
+
+/* CONFIG DO FOOTER */
+/* CAIXA PAI TAMANHO E COR E COMO SE COMPORTAR */
+footer{
+    width: 100%;
+    height: 380px;
+    background-color: #000000;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
 
 
 
 
 
 
+
+
+
+/* SEPARAR AS INFORMAÇÕES */
+.informações-foo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 100px;
+
+    text-align: center;
+
+    margin-bottom:50px;
+    padding: 10px 40px;
+    font-size: 24px;
+}
+
+.logoo img{
+    width: 160px;
+    height: 160px;
+    border-radius: 10%;
+}
 
 
 
