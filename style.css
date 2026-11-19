@@ -677,7 +677,7 @@ footer{
     transform: scale(1.25);
 }
 
-/* Ajuste em telas menores para não ficar apertado nas laterais */
+/* Ajuste em telas menores para não ficar apertado nas laterais o feedback */
 @media (max-width: 768px) {
     .feedbacks {
         padding: 40px 16px 60px 16px;
@@ -701,3 +701,218 @@ footer{
         text-align: center;
     }
 }
+
+/* =========================================
+   RESPONSIVIDADE (TABLETS E NOTEBOOKS MENORES)
+   ========================================= */
+
+   @media (max-width: 992px){
+    /* header mais compacto para o aoarelhos */
+    header{
+        padding: 10px 20px;
+    }
+
+    /* a logo tbm se adaptar ao aparelho */
+
+    .logo-header{
+        width: 85px;
+        height: 85px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    /* as abas tbm */
+    nav{
+        margin-top: 0;
+        font-size: 15px;
+    }
+
+    /* na primeira sessão ajuste o espaço do tpo e o tamanho dos selos */
+    .conteudo-banner{
+        margin-top: 80px;
+    }
+
+    /* config do selo de novidade */
+    .selo-fundo img{
+        width: 200px;
+        bottom: -35px;
+        left: 10px;
+    }
+
+    .selo-frente img {
+        width: 90px;
+        bottom: 10px;
+        left: 60px;
+        margin-bottom: 25px;
+    }
+
+    /* segunda sessão  empilhar os textos*/
+    .historia {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* /;[[TAMANHO DA FOTO DA DONA E TEXTOS DA SESSÃO HISTORIA]] */
+    #text-historia,
+    #imagem-historia {
+        width: 100%;
+    }
+
+    /* TAMANHO DO PARAGRAO DA HISTORIA  */
+    #text-historia p {
+        font-size: 20px;
+    }
+
+    .pedidos{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Terceira sessão: cards de produtos ficam 2 por linha ou empilhados */
+  
+
+    /* AS CAIXAS COM OS PRODUTOS TAMANHO */
+    .contatiner-pedido {
+        width: 45%;
+        margin: 0;
+    }
+
+    /* Quinta sessão: empilha mapa e foto da loja */
+    .inf-endereço {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+    }
+
+    /* TAMANHO DA FOTO E MAPA */
+    .mapa-loja,
+    .mont-loja {
+        width: 100%;
+        height: 350px;
+    }
+
+    /* Rodapé em 2 colunas no tablet */
+    footer {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    /* TEXTOS */
+    .informações-foo {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        font-size: 18px;
+    }
+   }
+
+
+   /* LEMBRAR DE COMENTAR  */
+   /* =========================================
+   RESPONSIVIDADE (CELULARES)
+   ========================================= */
+@media (max-width: 600px) {
+    /* Header: logo em cima e links organizados abaixo */
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 15px;
+    }
+
+    .logo-header img {
+        width: 70px;
+        height: 70px;
+    }
+
+    nav {
+        padding-left: 0;
+        margin-right: 0;
+        font-size: 15px;
+    }
+
+    .pgs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .onda-header {
+        height: 30px;
+    }
+
+    /* Banner inicial */
+    .novo-produto {
+        padding: 170px 15px 60px 15px;
+    }
+
+    .conteudo-banner {
+        margin-top: 20px;
+    }
+
+    /* Esconde ou diminui bem os selos no celular para não tampar o botão */
+    .selo-fundo img {
+        width: 130px;
+        bottom: -20px;
+        left: 5px;
+    }
+
+    .selo-frente img {
+        width: 60px;
+        bottom: 5px;
+        left: 38px;
+        margin-bottom: 15px;
+    }
+
+    /* Títulos das seções */
+    #text-historia h1,
+    .pedidos h1,
+    .feedbacks h1,
+    .mapa-ft h1 {
+        font-size: 32px;
+    }
+
+    #text-historia p {
+        font-size: 18px;
+    }
+
+    /* Mais pedidos: 1 produto por linha no celular */
+    .contatiner-pedido {
+        width: 100%;
+    }
+
+    .pedido {
+        height: 280px;
+        margin: 0;
+    }
+
+    .contatiner-pedido p {
+        font-size: 22px;
+    }
+
+    /* Endereço no rodapé do mapa */
+    .mapa-ft h2 {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    /* Rodapé: 1 coluna no celular */
+    .informações-foo {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    footer h2 {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
