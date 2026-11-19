@@ -24,6 +24,30 @@ body{
     background-color:#a65d2f ;
 }
 
+/* fontes estilo de cada un */
+p{
+    font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+h3{
+font-family: "Lemonada", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+h1,
+h2{
+font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Container que segura o header e a onda juntos no topo */
 .topo-fixo {
     position: fixed;
@@ -51,6 +75,14 @@ header{
     display: block;
     width: 100%;
     height: 54px;
+    overflow: hidden;
+    transition: height 0.35s ease, opacity 0.30s ease;
+}
+
+/* Quando passar da primeira sessão, recolhe a onda e deixa o header reto */
+.topo-fixo.onda-escondida .onda-header {
+    height: 0;
+    opacity: 0;
 }
 
 
@@ -83,8 +115,10 @@ nav a{
     margin-top: 20%;
 }
 
-
-
+.imagem{
+    position: relative; /* Referência para os selos */
+    width: 100%;
+}
 
 /* alinhar textto do inicio na caixa pai e criar a sombra em cima da foto */
 .novo-produto{
@@ -92,7 +126,7 @@ nav a{
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 120vh;
+    min-height: 100vh; /* Ocupa a tela toda sem exagerar */
 
 
     /* Alinha o texto dentro do banner */
@@ -100,17 +134,19 @@ nav a{
     align-items: center;
     text-align: center;
     justify-content: center;
+    padding: 160px 20px 80px 20px;/* Espaço para o header fixo não tampar o texto */
 }
 
 /* texto do produto novo CAIXA PAIXA */
 .conteudo-banner{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     color: #ffffff;
 
     width: 100%;
     margin-top: 180px;
+    z-index: 2;
 
 }
 
@@ -141,7 +177,7 @@ nav a{
 .btn-pedido-inicio{
     display: inline-block;
     align-self: center;
-    margin-top: 5%;
+    margin-top: 30px;
     border: none;
     border-radius: 14px;
     padding: 14px 280px;
@@ -154,6 +190,7 @@ nav a{
     align-items: center;
     text-align: center;
     justify-content: center;
+
 }
 
 a{
@@ -162,25 +199,23 @@ a{
 
 /* config imagem;selo de novidade SOMBRA  */
 .selo-fundo img{
-    display: flex;
+    position: absolute;
+    bottom: -60px;
+    left: 20px;
+    z-index: 3;
+    pointer-events: none;
 
-    align-items: left;
-    justify-content: left;
-    margin-left: 1%;
-    margin-top: -22%;
-
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: auto;
 }
 
 /* config imagem;selo de novidade FRENTE  */
 .selo-frente img{
-    display: flex;
+    position: absolute;
 
-    align-items: left;
-    justify-content: left;
-    margin-left: 8%;
-    margin-top: -18%;
+   bottom: 20px;
+   left: 95px;
+   z-index: 4;
 
     width: 130px;
     transform: rotate(-30deg);
@@ -201,35 +236,34 @@ nav a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 210vh;
-    margin-top: 7%;
-
-    margin-bottom: 5%;
+    width: 100%;
+    padding: 100px 20px;
 }
 .historia{
     display: flex;
     flex-direction: row;
     color: #ffffff;
 
-    gap: 5%;
+    gap: 50px;
 
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 
     width: 90%;
+    max-width: 1200px; /* Limita a largura máxima em monitores grandes (24" ou mais) */
 }
 
 /* configurações caixa filho de texto */
 #text-historia{
     text-align: center;
-    width: 40%;
+    width: 50%;
 }
 
 /* estilo do subtitulo da historia */
 #text-historia h2{
     font-size: 30px;
-    line-height: 60px;
+    line-height: 1,5;
 }
 
 /* estilo do titulo da historia */
@@ -248,13 +282,16 @@ nav a:hover{
 
 /* tamanho da caixa pai da foto */
 #imagem-historia{
-    width: 40%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 /* tamanho da foto */
 #imagem-historia img{
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -272,14 +309,17 @@ nav a:hover{
 
 /* config de cor tamanho do botão estilo */
 .sobre-nos button{
-    padding: 14px 140px;
+    width: 100%;
+    max-width: 350px;
+
+    padding: 15px 40px;
     border-radius: 14px;
     border: none;
 
     color: #ffffff;
     background-color: #cb6ce6;
     font-weight: 800;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
@@ -287,7 +327,7 @@ nav a:hover{
 /* config do titulo e caixa total da sesão */
 .pedidos{
     background-color: #eec4d8;
-    color: #ffffff;
+    color: #77554c;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -392,76 +432,89 @@ nav a:hover{
 
 /* configuração da sessão total  */
 .feedbacks{
+    width: 100%;
     color: #ffffff;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-
-    padding-top: 34px;     
-    padding-bottom: 60px; 
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 50px 40px 70px 40px;
 }
 
 /* tamanho do texto */
 .feedbacks h1{
     font-size: 50px;
+    padding: 0 20px;
 }
 
 /* configurações de espaço da caixa pai da foto e depoimento */
 .feedback{
+    flex: 0 0 100%;
+    width: 100%;
+    min-height: 560px; /* Altura flexível para não cortar foto nem texto */
+
     display: flex;
     flex-direction: row;
-
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin: 10px;
 
     gap:100px;
     margin-top: 24px;
 
+    margin: 30px;
+
     background-color: #f1dcc3;
-    padding: 20px;
-    border-radius: 20px;
+    padding: 60px 6%;
+    border-radius: 24px;
+    scroll-snap-align: start; /* Ponto de encaixe ao parar de rolar */
 }
 
 /* config da caixa dos depoimentos */
 .depoimento{
-    width: 50%;
-    height: 300px;
+    flex: 1; /* Ocupa o espaço restante ao lado da foto */
+    max-width: 940px;/* Evita que a linha de texto fique longa demais em monitor de 24" */
+    min-height: 360px;
 
     background-color: #77554c;
-    padding: 20px 30px;
+    padding: 28px 38px;
     color: #ffffff;
     border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
     
 }
 
 /* organtinação dos titulos */
 /* nome do cliente */
 .depoimento h1{
-    text-align: left;
+    padding: 0;
+    font-size: clamp(24px, 2.5vw, 38px);
 }
 
 /* @ do cliente */
 .depoimento h3{
-    text-align: left;
+    font-size: 18px;
+    opacity: 0.9;
+    margin-top: 4px;
 }
 
 /* comentario do cliente. */
 .depoimento p{
-    margin-top: 22px;
-    font-size: 20px;
+    margin-top: 18px;
+    font-size: clamp(16px, 1.3vw, 21px);
     font-weight: bold;
+    line-height: 1.5;
 }
 
 /* confi da imagem  */
 .cliente img{
-
-    width:400px;
-    height: 400px;
+    width: clamp(190px, 24vw, 340px); /* Adapta sozinha entre telas menores e maiores */
+    height: clamp(190px, 24vw, 340px);
     border-radius: 50%;
+    display: block;
+    object-fit: cover;
 }
 
 /* quinta sessão */
@@ -476,8 +529,18 @@ nav a:hover{
     align-items: center;
     text-align: center;
 
-    padding: 50px 20px 60px 20px;
-    color: #ffffff;
+    padding: 50px 20px 16px 20px;
+    color: #f24798;
+}
+
+/* cor destaque do venha conhecer  */
+.mapa-ft span{
+    color: #77554c;
+}
+
+.mapa-ft h1{
+    font-weight: bold;
+    font-size: 50px;
 }
 
 /* caixa pai do endereço e foto */
@@ -491,7 +554,7 @@ nav a:hover{
     width: 90%;
 
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 /* config do mapa */
@@ -528,3 +591,113 @@ nav a:hover{
     display: block;
 }
 
+
+/* CONFIG DO FOOTER */
+/* CAIXA PAI TAMANHO E COR E COMO SE COMPORTAR */
+footer{
+    width: 100%;
+    height: 380px;
+    background-color: #000000;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* SEPARAR AS INFORMAÇÕES */
+.informações-foo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 100px;
+
+    text-align: center;
+
+    margin-bottom:50px;
+    padding: 10px 40px;
+    font-size: 24px;
+}
+
+.logoo img{
+    width: 160px;
+    height: 160px;
+    border-radius: 10%;
+}
+
+/* carrosel do feedback */
+.carrosel{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Permite rolar na horizontal */
+    scroll-snap-type:  x mandatory; /* Faz o card encaixar certinho na tela */
+    scroll-behavior: smooth;/* Deixa a rolagem suave */
+
+    scrollbar-width: none; /* Esconde a barra de rolagem */
+    margin-top: 24px;
+    border-radius: 24px;
+}
+
+
+/* Esconde a barra de rolagem */
+.carrosel::-webkit-scrollbar{
+    display: none;
+}
+
+/* Container das bolinhas embaixo do carrossel */
+.carrossel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+/* Cada bolinha individual */
+.carrossel-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Bolinha do slide ativo */
+.carrossel-dot.ativa {
+    background-color: #cb6ce6;
+    transform: scale(1.25);
+}
+
+/* Ajuste em telas menores para não ficar apertado nas laterais */
+@media (max-width: 768px) {
+    .feedbacks {
+        padding: 40px 16px 60px 16px;
+    }
+
+    .feedback {
+        flex-direction: column;
+        min-height: auto;
+        gap: 24px;
+        padding: 36px 20px;
+    }
+
+    .depoimento {
+        width: 100%;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .depoimento h1,
+    .depoimento h3 {
+        text-align: center;
+    }
+}
