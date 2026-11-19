@@ -27,25 +27,25 @@ body{
 /* fontes estilo de cada un */
 p{
     font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 
 h3{
-font-family: "Lemonada", cursive;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Lemonada", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 
 }
 
 h1,
 h2{
-font-family: "Caprasimo", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Caprasimo", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Container que segura o header e a onda juntos no topo */
@@ -62,6 +62,7 @@ header{
     background-color: #77554c;
     color: white;
     width: 100%;
+    height: 140px;
 
     display: flex;
     justify-content: space-between;
@@ -93,7 +94,7 @@ nav{
     align-items: center;
     padding-left: 20px;
     margin-right: 1%;
-    margin-top: 2.5%;
+    margin-top: 3%;
     font-size: 18px;
 }
 
@@ -112,7 +113,6 @@ nav a{
     object-fit: cover;
     padding: 5px;
     margin-left: 25%;
-    margin-top: 20%;
 }
 
 .imagem{
@@ -145,7 +145,7 @@ nav a{
     color: #ffffff;
 
     width: 100%;
-    margin-top: 180px;
+    margin-top: 100px;
     z-index: 2;
 
 }
@@ -169,6 +169,12 @@ nav a{
     font-size: 60px;
     line-height:60px;
     font-family:'Caprasimo';
+}
+
+.conteudo-banner a {
+    font-family: "Caprasimo", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -237,7 +243,7 @@ nav a:hover{
     align-items: center;
     text-align: center;
     width: 100%;
-    padding: 100px 20px;
+    padding: 50px 20px;
 }
 .historia{
     display: flex;
@@ -263,7 +269,7 @@ nav a:hover{
 /* estilo do subtitulo da historia */
 #text-historia h2{
     font-size: 30px;
-    line-height: 1,5;
+    line-height: 1.6;
 }
 
 /* estilo do titulo da historia */
@@ -271,13 +277,13 @@ nav a:hover{
     font-size: 50px;
     margin-bottom: 10px;
     color: #eec4d8;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 /* estilo do paragrafo da historia */
 #text-historia p{
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 /* tamanho da caixa pai da foto */
@@ -287,12 +293,32 @@ nav a:hover{
     justify-content: center;
 }
 
-/* tamanho da foto */
-#imagem-historia img{
+
+
+/* config das 4 fotos da historia montagem */
+/* caixa pai */
+.colagem-historia {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr; /* Coluna da foto grande um pouco mais larga */
+    grid-template-rows: repeat(3, 135px); /* 3 linhas de 135px = 405px de altura total */
+    gap: 10px;
     width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
+    max-width: 520px; /* largura máxima */
+}
+
+/* imagens dentro da colagem */
+.colagem-historia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px;
+}
+
+/* Foto 1 (a maior de todas) ocupa toda a altura da coluna esquerda */
+.colagem-historia .foto-maiordetodas {
+    grid-column: 1;
+    grid-row: 1 / 4;
 }
 
 /* caixa pai do botão */
@@ -317,7 +343,7 @@ nav a:hover{
     border: none;
 
     color: #ffffff;
-    background-color: #cb6ce6;
+    background-color: #77554c;
     font-weight: 800;
     font-size: 16px;
 }
@@ -359,6 +385,7 @@ nav a:hover{
     align-items: center;
     gap: 10px;
     margin: 20px;
+    
 }
 
 /* deixa a caixa do produto e texto juntos */
@@ -369,7 +396,9 @@ nav a:hover{
 
     width: 30%;
     margin: 15px;
+    
 }
+
 
 /* config das caixas filho marrom com a imagem */
 .pedido{
@@ -377,12 +406,20 @@ nav a:hover{
     margin: 15px;
     width: 100%;
     height: 400px;
+    font-size: 10px;
+
 
     justify-content: center;
     align-items: center;
-    border-radius: 24px;
+    border-radius: 12px;
 
     overflow: hidden; /*serve para cortar qualquer conteudo que ultrapasse os limites de tamanho de um elemento container */
+    margin-bottom: 16px;
+    box-shadow: 0 0  28px #851d00;
+    border: solid 20px #692800;
+    border-radius: 20px;
+
+    background-color: #692800;
 }
 
 /* tamanho da imagem e config */
@@ -390,15 +427,18 @@ nav a:hover{
     width: 100%;
     height: 100%;
     object-fit: cover; /* para não deformar a imagem */
+
+    border-radius: 18px;
 }
 
 /* config do texto dos produtos */
 .contatiner-pedido p{
-    font-size: 30px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
 
-    margin-top: 15px;
+    margin-top: 55px;
+    margin-left: 5%;
 }
 
 /* config do botão de mais produtos */
@@ -414,6 +454,18 @@ nav a:hover{
 
     margin-top: 40px;
     margin-bottom:20px;
+}
+
+.melhor-doce{
+    display: flex;
+    flex-direction: row;
+    transform: rotate(-30deg);
+}
+
+.melhor-doce img{
+    width: 30%;
+    height: 30%;
+    margin-top: -40%;
 }
 
 /* config de cor tamanho do botão estilo */
@@ -609,24 +661,42 @@ footer{
 
 }
 
-/* SEPARAR AS INFORMAÇÕES */
+/* SEPARAR AS INFORMAÇÕES caixa pai */
 .informações-foo{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 100px;
+    justify-content: space-between;
+    gap: 32px;
+
+    width: 100%;
+    max-width: 1200px;
 
     text-align: center;
 
     margin-bottom:50px;
     padding: 10px 40px;
-    font-size: 24px;
 }
 
 .logoo img{
     width: 160px;
     height: 160px;
     border-radius: 10%;
+
+}
+
+.separar1{
+    display: flex;
+    align-items: center;
+    gap:80px;
+}
+
+.separar2{
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap:80px;
 }
 
 /* carrosel do feedback */
@@ -712,6 +782,14 @@ footer{
         padding: 10px 20px;
     }
 
+    .topo-fixo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
     /* a logo tbm se adaptar ao aparelho */
 
     .logo-header{
@@ -719,6 +797,7 @@ footer{
         height: 85px;
         margin-left: 0;
         margin-top: 0;
+        z-index: 1000;
     }
 
     /* as abas tbm */
