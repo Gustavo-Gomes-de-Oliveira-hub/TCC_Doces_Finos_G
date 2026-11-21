@@ -205,17 +205,16 @@ nav a{
     align-self: center;
     margin-top: 30px;
     border: none;
-    border-radius: 14px;
-    padding: 14px 280px;
-    font-weight: bold;
-    font-size: 20px;
 
+    border-radius: 14px;
+    padding: 14px clamp(32px, 12vw, 220px);
+    max-width: 90%;
+    
+    font-weight: bold;
+    font-size: clamp(16px, 1.5vw, 20px);
     background-color: #cb6ce6;
     color: #ffffff;
-
-    align-items: center;
     text-align: center;
-    justify-content: center;
 
 }
 
