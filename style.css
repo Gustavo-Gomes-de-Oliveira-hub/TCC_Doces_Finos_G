@@ -209,7 +209,7 @@ nav a{
     border-radius: 14px;
     padding: 14px clamp(32px, 12vw, 220px);
     max-width: 90%;
-    
+
     font-weight: bold;
     font-size: clamp(16px, 1.5vw, 20px);
     background-color: #cb6ce6;
@@ -489,14 +489,16 @@ nav a:hover{
 
 /* config de cor tamanho do botão estilo */
 .produtos-saber button{
-    padding: 14px 180px;
+    padding: 14px clamp(24px, 10vw, 180px);
+    max-width: 100%;
+    width: auto;
     border-radius: 14px;
     border: none;
 
     color: #ffffff;
     background-color: #cb6ce6;
     font-weight: 800;
-    font-size: 18px;
+    font-size: clamp(15px, 1.4vw, 18px);
 }
 
 /* quarta sessão */
@@ -1016,10 +1018,33 @@ footer{
         height: 280px;
         margin: 0 0 12px 0;
         border-width: 14px;
+    }
 
+    /* tamanho da fonte */
     .contatiner-pedido p {
         font-size: 20px;
         margin-top: 12px;
+    }
+
+    .produtos-saber {
+        width: 100%;
+    }
+
+
+    /* botão dos produtos */
+    .produtos-saber button {
+        width: 100%;
+        max-width: 340px;
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+
+    /* botão do inicio */
+    .btn-pedido-inicio {
+        width: 100%;
+        max-width: 340px;
+        padding: 14px 20px;
+        font-size: 16px;
     }
 
     /* Endereço no rodapé do mapa */
