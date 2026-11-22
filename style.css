@@ -1183,11 +1183,23 @@ footer{
     }
 
     /* Rodapé: 1 coluna no celular */
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+
     .informações-foo {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 24px;
         font-size: 16px;
         margin-bottom: 30px;
+        padding: 0;
     }
 
     footer h2 {
@@ -1234,17 +1246,13 @@ footer{
         display: flex;
         flex-direction: row;
         transform: rotate(-30deg);
+        margin-left: 10px;
     }
 
     .melhor-doce img{
-        width: auto;
-        height: auto;
-        margin-top: -40%;
-    }
-
-    footer{
-        display: flex;
-        flex-direction: column;
+        width: 85px;       /* Tamanho controlado em vez de auto */
+        height: auto;      /* Mantém a proporção */
+        margin-top: -45px; /* Deslocamento controlado em px */
     }
 }
 
