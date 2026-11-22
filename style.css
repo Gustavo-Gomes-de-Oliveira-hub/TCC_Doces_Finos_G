@@ -365,6 +365,7 @@ nav a:hover{
     background-color: #77554c;
     font-weight: 800;
     font-size: 16px;
+    cursor: pointer;
 }
 
 
@@ -402,7 +403,7 @@ nav a:hover{
     flex-wrap: nowrap; /* Mantém os 3 um do lado do outro até o celular */
     justify-content: center;
     align-items: flex-start;
-    gap: 20px;
+    gap: 40px;
     margin: 24px auto;
     width: 100%;
     max-width: 1200px;
@@ -456,8 +457,19 @@ nav a:hover{
     font-weight: bold;
     text-align: center;
 
-    margin-top: 12px;
+    margin-top: 20px;
     margin-left: 0;
+}
+
+/* efeito para quando passar o mouse a caixa ficar rosa */
+
+.pedido:hover{
+    background-color: #f24798;
+    border: solid clamp(10px, 1.4vw, 20px) #f24798;
+
+    transform: translateY(-6px) ;
+    transition: 0.60s ease ;
+    width: 98%;
 }
 
 /* config do botão de mais produtos */
@@ -475,6 +487,8 @@ nav a:hover{
     margin-bottom:20px;
 }
 
+
+/* config para deixar o selo de melhor do mundo em baixo */
 .melhor-doce{
     display: flex;
     flex-direction: row;
@@ -482,7 +496,7 @@ nav a:hover{
 }
 
 .melhor-doce img{
-    width: 30%;
+    width: 22%;
     height: 30%;
     margin-top: -40%;
 }
@@ -499,6 +513,7 @@ nav a:hover{
     background-color: #cb6ce6;
     font-weight: 800;
     font-size: clamp(15px, 1.4vw, 18px);
+    cursor: pointer;
 }
 
 /* quarta sessão */
@@ -768,6 +783,39 @@ footer{
     transform: scale(1.25);
 }
 
+/* CONFIG DO ICONES DE CONTATO */
+
+/* coportamento com e espaço entre eles */
+.redes{
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.redes i {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+
+}
+/* efeito quando o cursos passas em cima  */
+.redes i:hover{
+    color: darkgrey;
+    transition: 0.3s;
+    transform: translateY(6px) ;
+}
+
+/* tamanho da fonte do número */
+.redes h2{
+    font-size: 18px;
+    color: #ffffff;
+}
+
 /* Ajuste em telas menores para não ficar apertado nas laterais o feedback */
 @media (max-width: 768px) {
     .feedbacks {
@@ -916,7 +964,41 @@ footer{
         gap: 30px;
         font-size: 18px;
     }
-   }
+
+    /* CONFIG DO ICONES DE CONTATO */
+
+    /* coportamento com e espaço entre eles */
+    .redes{
+    display: flex;
+    gap: 20px;
+    font-size: auto;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+    }
+
+
+    .redes i {
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffffff;
+
+    }
+
+    /* efeito quando o cursos passas em cima  */
+    .redes i:hover{
+        color: darkgrey;
+        transition: 0.3s;
+        transform: translateY(6px) ;
+    }
+
+    /* tamanho da fonte do número */
+    .redes h2{
+        font-size: auto;
+        color: #ffffff;
+    }
+}
 
 
    /* LEMBRAR DE COMENTAR  */
@@ -1098,6 +1180,40 @@ footer{
     footer h2 {
         font-size: 14px;
         text-align: center;
+    }
+
+        /* CONFIG DO ICONES DE CONTATO */
+
+    /* coportamento com e espaço entre eles */
+    .redes{
+    display: flex;
+    gap: 20px;
+    font-size: auto;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+    }
+
+
+    .redes i {
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffffff;
+
+    }
+
+    /* efeito quando o cursos passas em cima  */
+    .redes i:hover{
+        color: darkgrey;
+        transition: 0.3s;
+        transform: translateY(6px) ;
+    }
+
+    /* tamanho da fonte do número */
+    .redes h2{
+        font-size: auto;
+        color: #ffffff;
     }
 }
 
