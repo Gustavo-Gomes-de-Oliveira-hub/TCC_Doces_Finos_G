@@ -1234,6 +1234,13 @@ footer{
         align-items: center;
     }
 
+    footer h1,
+    footer h2,
+    footer h3,
+    footer p {
+    margin: 0;
+    }
+
         /* CONFIG DO ICONES DE CONTATO */
 
     /* coportamento com e espaço entre eles */
