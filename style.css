@@ -932,9 +932,17 @@ footer{
         padding: 12px 15px;
     }
 
+    .logo-header {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
     .logo-header img {
         width: 70px;
         height: 70px;
+        margin-left: 0;
     }
 
     nav {
@@ -974,6 +982,22 @@ footer{
         margin-top: 20px;
     }
 
+
+    /* 2. Ajusta os títulos do banner para não cortarem na lateral */
+    .conteudo-banner h1 {
+        font-size: 38px;
+    }
+
+    .conteudo-banner h3 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .conteudo-banner h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    
     /* Esconde ou diminui bem os selos no celular para não tampar o botão */
     .selo-fundo img {
         width: 130px;
@@ -1045,6 +1069,16 @@ footer{
         max-width: 340px;
         padding: 14px 20px;
         font-size: 16px;
+    }
+
+    /* 3. Impede a foto da colagem de vazar para a próxima seção */
+    .colagem-historia {
+        grid-template-rows: repeat(3, 105px);
+        overflow: hidden;
+    }
+
+    .colagem-historia img {
+        min-height: 0;
     }
 
     /* Endereço no rodapé do mapa */
