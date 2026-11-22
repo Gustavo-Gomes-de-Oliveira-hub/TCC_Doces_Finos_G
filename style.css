@@ -998,6 +998,19 @@ footer{
         font-size: auto;
         color: #ffffff;
     }
+
+    /* config para deixar o selo de melhor do mundo em baixo */
+    .melhor-doce{
+        display: flex;
+        flex-direction: row;
+        transform: rotate(-30deg);
+    }
+
+    .melhor-doce img{
+        width: auto;
+        height: auto;
+        margin-top: -40%;
+    }
 }
 
 
@@ -1214,6 +1227,24 @@ footer{
     .redes h2{
         font-size: auto;
         color: #ffffff;
+    }
+
+    /* config para deixar o selo de melhor do mundo em baixo */
+    .melhor-doce{
+        display: flex;
+        flex-direction: row;
+        transform: rotate(-30deg);
+    }
+
+    .melhor-doce img{
+        width: auto;
+        height: auto;
+        margin-top: -40%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
     }
 }
 
