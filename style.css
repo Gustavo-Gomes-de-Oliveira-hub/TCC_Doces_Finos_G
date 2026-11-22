@@ -1227,12 +1227,11 @@ footer{
     /* Empilha os grupos internos e centraliza tudo */
     .separar1,
     .separar2 {
+        width: 100%;
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 24px;
-        width: 100%;
     }
 
         /* CONFIG DO ICONES DE CONTATO */
