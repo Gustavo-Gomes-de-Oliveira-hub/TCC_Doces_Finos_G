@@ -7,6 +7,8 @@
 
 @import url('https://fonts.cdnfonts.com/css/caprasimo'); /*FONTE PARA TITULOS*/
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); /*FONTE PARA botão*/
+
 
 
 
@@ -122,6 +124,11 @@ nav a{
     color: #ffffff;
     text-decoration: none;
     padding: 5px;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
 
 /* posição e tamanho da logo no rodape */
@@ -222,6 +229,10 @@ a{
     cursor: pointer;
 }
 
+.btn-pedido-inicio:hover{
+    color: #e5a5f7;
+}
+
 /* config imagem;selo de novidade SOMBRA  */
 .selo-fundo img{
     position: absolute;
@@ -295,7 +306,7 @@ nav a:hover{
 #text-historia h1{
     font-size: 50px;
     margin-bottom: 10px;
-    color: #eec4d8;
+    color: #f194c0;
     font-weight: 400;
 }
 
@@ -353,7 +364,7 @@ nav a:hover{
 }
 
 /* config de cor tamanho do botão estilo */
-.sobre-nos button{
+.sobre-nos a{
     width: 100%;
     max-width: 350px;
 
@@ -363,9 +374,17 @@ nav a:hover{
 
     color: #ffffff;
     background-color: #77554c;
-    font-weight: 800;
     font-size: 16px;
     cursor: pointer;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.sobre-nos a:hover{
+    color: #e5a5f7;
 }
 
 
@@ -502,7 +521,7 @@ nav a:hover{
 }
 
 /* config de cor tamanho do botão estilo */
-.produtos-saber button{
+.produtos-saber   a{
     padding: 14px clamp(24px, 10vw, 180px);
     max-width: 100%;
     width: auto;
@@ -514,7 +533,17 @@ nav a:hover{
     font-weight: 800;
     font-size: clamp(15px, 1.4vw, 18px);
     cursor: pointer;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
+
+.produtos-saber a:hover{
+    color: #e5a5f7;
+}
+
 
 /* quarta sessão */
 
@@ -679,6 +708,43 @@ nav a:hover{
     display: block;
 }
 
+.faca-pedido{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+
+    margin-top: 40px;
+    margin-bottom:20px;
+
+}
+
+.faca-pedido  a{
+    padding: 14px clamp(24px, 10vw, 180px);
+    max-width: 100%;
+    width: auto;
+    border-radius: 12px;
+    border: none;
+
+    color: #ffffff;
+    background-color: #cb6ce6;
+    font-weight: 800;
+    font-size: clamp(15px, 1.4vw, 18px);
+    cursor: pointer;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    box-shadow: 0 0  40px #000;
+}
+
+.faca-pedido a:hover{
+    color: #e5a5f7;
+}
+
 
 /* CONFIG DO FOOTER */
 /* CAIXA PAI TAMANHO E COR E COMO SE COMPORTAR */
@@ -815,6 +881,8 @@ footer{
     font-size: 18px;
     color: #ffffff;
 }
+
+
 
 /* Ajuste em telas menores para não ficar apertado nas laterais o feedback */
 @media (max-width: 768px) {
@@ -1011,6 +1079,7 @@ footer{
         height: auto;
         margin-top: -40%;
     }
+    
 }
 
 
