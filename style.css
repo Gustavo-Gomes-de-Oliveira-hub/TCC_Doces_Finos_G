@@ -1027,6 +1027,16 @@ footer{
         padding: 12px 15px;
     }
 
+    .logoo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logoo img {
+        width: 130px;
+        height: 130px;
+    }
+
     .logo-header {
         width: auto;
         height: auto;
@@ -1187,6 +1197,10 @@ footer{
     footer{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
         height: auto;
         padding: 40px 20px;
     }
@@ -1196,7 +1210,10 @@ footer{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 24px;
+        gap: 28px;
+        width: 100%;
+
+
         font-size: 16px;
         margin-bottom: 30px;
         padding: 0;
@@ -1207,12 +1224,24 @@ footer{
         text-align: center;
     }
 
+    /* Empilha os grupos internos e centraliza tudo */
+    .separar1,
+    .separar2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        width: 100%;
+    }
+
         /* CONFIG DO ICONES DE CONTATO */
 
     /* coportamento com e espaço entre eles */
     .redes{
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 18px;
     font-size: auto;
     color: white;
 
