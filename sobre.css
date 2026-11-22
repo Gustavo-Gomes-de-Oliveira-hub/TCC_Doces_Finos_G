@@ -109,6 +109,12 @@ nav a:hover{
 
 }
 
+.banner h1{
+    font-family: 'lemonada';
+    font-size: 45px;
+    
+}
+
 /*PARTE PRINCIPAL DA PÁGINA*/
 
 .infos-gerais{
@@ -125,23 +131,25 @@ nav a:hover{
     flex-direction: column;
 }
 
-img{
+.historia img{
     width: 600px;
     height: 600px;
-    
-
+    box-shadow: 17px 15px  28px black;
+    border-radius: 20px;
+    border: 5px solid black;
 }
 /*H2 e P DA PARTE PRINCIPAL*/
 
 .infos-gerais h2{
     font-family: 'caprasimo';
     font-size: 70px;
-    color: #cb6ce6;
+    color: #e895ff;
 }
 
 .infos-gerais p{
-    font-family: 'trocchi';
+    font-family: 'trocchi', sans-serif;
     font-size: 30px;
+    line-height: 40px;
 }
 
 

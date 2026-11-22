@@ -100,28 +100,108 @@ nav a:hover{
 
 /*PARTE DESTAQUE DA PÁGINA*/
 
-.infos-principais{
-    background-color: rgb(255, 147, 204);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    height: 467px;
-    margin-top: 10%;
+.pedidos{
+    background-color: #eec4d8;
+    color: #77554c;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding-top: 60px;     
+    padding-bottom: 60px; 
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-/*PARTES "SECUNDARIAS DA PÁGINA"*/
-.infos-gerais{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    height: 458px;
+/* tamanho do titulo */
+
+.pedidos h1{
+    font-size: 50px;
 }
 
-img{
-    width: 400px;
-    height: 400px;
+/* cor da letra de destaque  */
+.pedidos span{
+    color: #f24798;
+}
+
+/* config caixa pai dos pedidos */
+
+.mais-pedidos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Mantém os 3 um do lado do outro até o celular */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 24px auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* deixa a caixa do produto e texto juntos */
+.contatiner-pedido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+    
+}
+
+
+/* config das caixas filho marrom com a imagem */
+.pedido{
+    display: flex;
+    margin: 15px;
+    width: 100%;
+    height: clamp(220px, 26vw, 380px);
+    font-size: 10px;
+
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden; /*serve para cortar qualquer conteudo que ultrapasse os limites de tamanho de um elemento container */
+    margin-bottom: 12px;
+    box-shadow: 0 0  28px #851d00;
+    border: solid clamp(10px, 1.4vw, 20px) #692800;
+    border-radius: 20px;
+
+    background-color: #692800;
+}
+
+/* tamanho da imagem e config */
+.pedido img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* para não deformar a imagem */
+
+    border-radius: 18px;
+}
+
+/* config do texto dos produtos */
+.contatiner-pedido p{
+    font-size: clamp(14px, 1.25vw, 18px);
+    font-weight: bold;
+    text-align: center;
+
+    margin-top: 12px;
+    margin-left: 0;
+}
+
+/* config do botão de mais produtos */
+
+.melhor-doce{
+    display: flex;
+    flex-direction: row;
+    transform: rotate(-30deg);
+}
+
+.melhor-doce img{
+    width: 30%;
+    height: 30%;
+    margin-top: -40%;
 }
 
 
