@@ -21,11 +21,11 @@
 }
 
 /* tamanho do corpo da pagina */
+html,
 body{
     width: 100%;
     min-height: 100vh;
-    overflow-x: hidden;
-    background-color: #a65d2f;
+    overflow-x: clip;
 }
 
 /* fontes estilo de cada un */
@@ -911,6 +911,7 @@ footer{
         min-height: auto;
         gap: 24px;
         padding: 36px 20px;
+        margin: 16px 0;
     }
 
     .depoimento {
@@ -1164,11 +1165,12 @@ footer{
 
     /* Banner inicial */
     .novo-produto {
-        padding: 170px 15px 60px 15px;
+        padding: 195px 15px 60px 15px;
     }
 
     .conteudo-banner {
-        margin-top: 20px;
+        margin-top: 10px;
+        max-width: 100%;
     }
 
 
@@ -1316,6 +1318,7 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     footer h1,
