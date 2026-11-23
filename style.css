@@ -24,8 +24,8 @@
 html,
 body{
     width: 100%;
-    min-height: 100vh;
-    overflow-x: clip;
+    min-height: 100%;
+    overflow-x: hidden;
 }
 
 /* fontes estilo de cada un */
@@ -1375,6 +1375,22 @@ footer{
         width: 85px;       /* Tamanho controlado em vez de auto */
         height: auto;      /* Mantém a proporção */
         margin-top: -45px; /* Deslocamento controlado em px */
+    }
+
+    .imagem,
+    .novo-produto,
+    .sessão-historia,
+    .pedidos,
+    .feedbacks,
+    .carrosel,
+    .mapa-ft,
+    footer {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    .novo-produto {
+        min-height: 100svh; /* Mais estável que 100vh na barra de endereço do celular */
     }
 }
 
