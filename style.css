@@ -274,11 +274,12 @@ nav a:hover{
     text-align: center;
     width: 100%;
     padding: 50px 20px;
+    background-color: #f6ebdd;
 }
 .historia{
     display: flex;
     flex-direction: row;
-    color: #ffffff;
+    color: #77554c;
 
     gap: 50px;
 
@@ -294,6 +295,8 @@ nav a:hover{
 #text-historia{
     text-align: center;
     width: 50%;
+
+    
 }
 
 /* estilo do subtitulo da historia */
@@ -306,7 +309,7 @@ nav a:hover{
 #text-historia h1{
     font-size: 50px;
     margin-bottom: 10px;
-    color: #f194c0;
+    color: #f24798;
     font-weight: 400;
 }
 
@@ -314,6 +317,10 @@ nav a:hover{
 #text-historia p{
     text-align: center;
     font-size: 22px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 /* tamanho da caixa pai da foto */
@@ -373,7 +380,7 @@ nav a:hover{
     border: none;
 
     color: #ffffff;
-    background-color: #77554c;
+    background-color: #a65d2f;
     font-size: 16px;
     cursor: pointer;
 
@@ -387,12 +394,20 @@ nav a:hover{
     color: #e5a5f7;
 }
 
+#text-historia p{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
 
 /* terceira sessão */
 /* config do titulo e caixa total da sesão */
 .pedidos{
-    background-color: #eec4d8;
-    color: #77554c;
+    background-color: #d995aa;
+    color: #ffffff;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -411,7 +426,7 @@ nav a:hover{
 
 /* cor da letra de destaque  */
 .pedidos span{
-    color: #f24798;
+    color: #a65d2f;
 }
 
 /* config caixa pai dos pedidos */
@@ -529,7 +544,7 @@ nav a:hover{
     border: none;
 
     color: #ffffff;
-    background-color: #cb6ce6;
+    background-color: #a65d2f;
     font-weight: 800;
     font-size: clamp(15px, 1.4vw, 18px);
     cursor: pointer;
@@ -550,12 +565,14 @@ nav a:hover{
 /* configuração da sessão total  */
 .feedbacks{
     width: 100%;
-    color: #ffffff;
+    color: #f6ebdd;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 50px 40px 70px 40px;
+
+    background-color: #4b2928;
 }
 
 /* tamanho do texto */
@@ -729,7 +746,7 @@ nav a:hover{
     border: none;
 
     color: #ffffff;
-    background-color: #cb6ce6;
+    background-color: #a65d2f;
     font-weight: 800;
     font-size: clamp(15px, 1.4vw, 18px);
     cursor: pointer;
@@ -738,7 +755,6 @@ nav a:hover{
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
-    box-shadow: 0 0  40px #000;
 }
 
 .faca-pedido a:hover{
@@ -751,7 +767,7 @@ nav a:hover{
 footer{
     width: 100%;
     height: 380px;
-    background-color: #000000;
+    background-color: #4b2928;
     color: #ffffff;
 
     display: flex;
@@ -845,7 +861,7 @@ footer{
 
 /* Bolinha do slide ativo */
 .carrossel-dot.ativa {
-    background-color: #cb6ce6;
+    background-color: #77554c;
     transform: scale(1.25);
 }
 
@@ -1005,6 +1021,12 @@ footer{
         max-width: 90%;
     }
 
+    .melhor-doce img {
+        width: 100px;
+        height: 100px;
+        margin-top: -40px;
+    }
+
     /* Quinta sessão: empilha mapa e foto da loja */
     .inf-endereço {
         flex-direction: column;
@@ -1022,15 +1044,21 @@ footer{
 
     /* Rodapé em 2 colunas no tablet */
     footer {
+        display: flex;
         height: auto;
         padding: 40px 20px;
+        justify-content: center;
+        align-items: center;
     }
 
     /* TEXTOS */
     .informações-foo {
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: row;
         gap: 30px;
         font-size: 18px;
+        justify-content: center;
+        align-items: center;
     }
 
     /* CONFIG DO ICONES DE CONTATO */
@@ -1065,19 +1093,6 @@ footer{
     .redes h2{
         font-size: auto;
         color: #ffffff;
-    }
-
-    /* config para deixar o selo de melhor do mundo em baixo */
-    .melhor-doce{
-        display: flex;
-        flex-direction: row;
-        transform: rotate(-30deg);
-    }
-
-    .melhor-doce img{
-        width: auto;
-        height: auto;
-        margin-top: -40%;
     }
     
 }
