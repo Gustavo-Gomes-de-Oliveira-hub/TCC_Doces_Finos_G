@@ -1,0 +1,628 @@
+
+@import url('https://fonts.cdnfonts.com/css/trocchi-2'); /*FONTE PARA PARAGRAFOS*/
+
+
+@import url('https://fonts.cdnfonts.com/css/lemonada'); /*FONTE PARA SUBTITULOS*/
+
+
+@import url('https://fonts.cdnfonts.com/css/caprasimo'); /*FONTE PARA TITULOS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); /*FONTE PARA botão*/
+
+
+
+
+/* #4b2928 - cor para o header */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* tamanho do corpo da pagina */
+html,
+body{
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+/* fontes estilo de cada un */
+p{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+h3{
+    font-family: "Lemonada", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+h1,
+h2{
+    font-family: "Caprasimo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Container que segura o header e a onda juntos no topo */
+.topo-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* configurações do rodape */
+header{
+    background-color: #77554c;
+    color: white;
+    width: 100%;
+    height: 140px;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 40px;
+    text-align: 10px;
+    align-items: center;
+    transition: height 0.35s ease, padding 0.35s ease;
+}
+
+/* Controla a altura da onda para não tampar a imagem */
+.onda-header {
+    display: block;
+    width: 100%;
+    height: 54px;
+    overflow: hidden;
+    transition: height 0.35s ease, opacity 0.30s ease;
+}
+
+/* Quando passar da primeira sessão, recolhe a onda e deixa o header reto */
+.topo-fixo.onda-escondida .onda-header {
+    height: 0;
+    opacity: 0;
+}
+
+.topo-fixo.onda-escondida header {
+    height: 85px;
+    padding: 8px 40px;
+}
+
+.topo-fixo.onda-escondida .logo-header img {
+    width: 68px;
+    height: 68px;
+    margin-left: 0;
+}
+
+.topo-fixo.onda-escondida nav {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+/* color as paginas no canto direito */
+nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 20px;
+    margin-right: 1%;
+    font-size: 18px;
+    transition: margin-top 0.35s ease, font-size 0.35s ease;
+}
+
+/* colocar cor nos nomes da pagina e tirar o link em baixo */
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* posição e tamanho da logo no rodape */
+.logo-header img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 5px;
+    margin-left: 25%;
+    transition: width 0.35s ease, height 0.35s ease, margin-left 0.35s ease;
+}
+
+/* CONFIG DO FOOTER */
+/* CAIXA PAI TAMANHO E COR E COMO SE COMPORTAR */
+footer{
+    width: 100%;
+    height: 380px;
+    background-color: #4b2928;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* SEPARAR AS INFORMAÇÕES caixa pai */
+.informações-foo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    text-align: center;
+
+    margin-bottom:50px;
+    padding: 10px 40px;
+}
+
+.logoo img{
+    width: 160px;
+    height: 160px;
+    border-radius: 10%;
+
+}
+
+.separar1{
+    display: flex;
+    align-items: center;
+    gap:80px;
+}
+
+.separar2{
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap:80px;
+}
+
+/* CONFIG DO ICONES DE CONTATO */
+
+/* coportamento com e espaço entre eles */
+.redes{
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.redes i {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+
+}
+/* efeito quando o cursos passas em cima  */
+.redes i:hover{
+    color: darkgrey;
+    transition: 0.3s;
+    transform: translateY(6px) ;
+}
+
+/* tamanho da fonte do número */
+.redes h2{
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* PRIMEIRA SEÇÃO (Banner) */
+.titulo-inicio {
+    width: 100%;
+    background-color: #4b2928;
+    text-align: center;
+    padding: 205px 20px 60px 20px; /* Espaço suficiente para o header fixo */
+}
+
+/* titulo */
+.titulo-inicio h1{
+    font-size: 50px;
+    color: #e5a5f7;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+/* paragrafo */
+.titulo-inicio p{
+    font-size: 22px;
+    color: #e5a5f7;
+
+    line-height: 1.5;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* segunda sessão */
+.nossa-historia{
+    width: 100%;
+    background-color: #f6ebdd;
+    padding: 65px 20px;
+}
+
+/* caixa pai */
+.segunda-sessao{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 50px 50px;
+    gap: 44px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+
+/* foto segunda-sess */
+.foto-his {
+    flex: 0 0 420px;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(75, 41, 40, 0.16);
+}
+
+.foto-his img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.99);
+    border: solid 3px #f24798;
+}
+
+/* texto contatndo a historia */
+.contando-historia{
+    text-align: left;
+}
+
+/* cada titulo paragrafo de forma separada */
+
+.contando-historia h1{
+    font-size: 38px;
+    color: #f24798;
+}
+
+.contando-historia p{
+    color: #4b2928;
+    line-height: 1.75;
+}
+
+/* TERCEIRA SESSÃO FOTO A DIREITA E O TEXTO A ESQUERDA */
+
+/* SESSÃO */
+.diferencial{
+    display: flex;
+    flex-direction: column;
+    background-color: #e5a5f7;
+
+    justify-content: center;
+}
+
+/* caixa pai  */
+.dif{
+    display: flex;
+    flex-direction: row;
+    background-color: #e5a5f7;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 50px;
+    gap: 44px;
+
+    margin: 0 auto;
+    width: 100%;
+
+
+}
+
+
+/* caixa pai dos textos e fotos*/
+.contando-diferencial{
+    text-align: left;
+    width: 40%;
+}
+
+.contando-diferencial h1{
+    font-size: 38px;
+    color: #77554c;
+    margin-bottom: 14px;
+}
+
+.contando-diferencial p{
+    color: #4b2928;
+    line-height: 1.75;
+}
+
+/* config foto */
+.foto-dif{
+    flex: 0 0 420px;
+    width: 100%;
+}
+
+
+/* tamanho da foto */
+.foto-dif img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.99);
+    border: solid 3px #f24798;
+}
+
+/* botão encomenda */
+
+.bnt-enco{
+    display: inline-block;
+    align-self: center;
+    margin-top: 30px;
+    border: none;
+
+    border-radius: 14px;
+    padding: 14px clamp(32px, 12vw, 220px);
+    max-width: 90%;
+
+    font-weight: bold;
+    font-size: clamp(16px, 1.5vw, 20px);
+    background-color: #cb6ce6;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px ;
+    cursor: pointer;
+
+}
+
+.bnt-enco a{
+    color: #ffffff;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.btn-enc:hover{
+    color: #e5a5f7;
+    text-decoration: none;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 850px) {
+    .segunda-sessao,
+    .diferencial {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .foto-his,
+    .foto-dif {
+        flex: none;
+        width: 100%;
+        max-width: 440px;
+    }
+
+    .foto-his img,
+    .foto-dif img {
+        height: 250px;
+    }
+
+    .contando-historia,
+    .contanto-diferencial {
+        text-align: center;
+    }
+}
+
+/* =========================================
+   RESPONSIVIDADE (TABLETS E CELULARES)
+   ========================================= */
+@media (max-width: 992px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    nav {
+        font-size: 15px;
+        gap: 12px;
+        padding-left: 10px;
+    }
+
+    .logo-header img {
+        width: 90px;
+        height: 90px;
+        margin-left: 0;
+    }
+
+    .titulo-inicio {
+        padding: 185px 20px 50px 20px;
+    }
+
+    .titulo-inicio h1 {
+        font-size: 40px;
+        line-height: 1.25;
+    }
+
+    .segunda-sessao,
+    .dif {
+        padding: 36px 20px;
+        gap: 28px;
+    }
+
+    .contando-diferencial {
+        width: 100%;
+    }
+
+    .foto-his,
+    .foto-dif {
+        flex: 0 0 320px;
+        height: 320px;
+    }
+
+    footer {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .informações-foo {
+        justify-content: center;
+        margin-bottom: 24px;
+        padding: 10px 16px;
+    }
+
+    .separar1,
+    .separar2 {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 12px 15px;
+    }
+
+    .logo-header img {
+        width: 70px;
+        height: 70px;
+        margin-left: 0;
+    }
+
+    .topo-fixo.onda-escondida header {
+        height: auto;
+        gap: 6px;
+        padding: 8px 15px;
+    }
+
+    .topo-fixo.onda-escondida .logo-header img {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav {
+        padding-left: 0;
+        margin-right: 0;
+        font-size: 15px;
+    }
+
+    .pgs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .onda-header {
+        height: 30px;
+    }
+
+    .titulo-inicio {
+        margin-top: 0;
+        padding: 175px 15px 45px 15px;
+    }
+
+    .titulo-inicio h1 {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    .titulo-inicio p {
+        font-size: 17px;
+    }
+
+    .nossa-historia {
+        padding: 40px 14px;
+    }
+
+    .segunda-sessao,
+    .dif {
+        flex-direction: column;
+        padding: 24px 12px;
+        gap: 22px;
+    }
+
+    .contando-historia,
+    .contando-diferencial {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contando-historia h1,
+    .contando-diferencial h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .contando-historia p,
+    .contando-diferencial p {
+        font-size: 16px;
+    }
+
+    .foto-his,
+    .foto-dif {
+        flex: none;
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .bnt-enco {
+        width: 100%;
+        max-width: 320px;
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+
+    .informações-foo,
+    .separar1,
+    .separar2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .logoo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    footer h2 {
+        font-size: 14px;
+    }
+}
+

@@ -1,7 +1,7 @@
 // fazer com que a onda suma depois da primeira esseão
 
 const topoFixo = document.querySelector(".topo-fixo");
-const primeiraSessao = document.querySelector(".banner");
+const primeiraSessao = document.querySelector(".imagem");
 
 if (topoFixo && primeiraSessao) {
     function atualizarOndaHeader() {
