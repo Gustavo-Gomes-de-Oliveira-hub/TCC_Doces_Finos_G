@@ -104,10 +104,10 @@ if( telefone.trim() === ""){
 
 const textoWhatsapp =
 `Olá Gostaria  de enviar meu interesse em realizar uma encomenda!!\n\n
-Nome: ${nome}\n
-Data: ${data}\n
-Telefone: ${telefone}\n
-Encomenda de desejo: ${Evento}\n
+Nome: ${nome}
+Data: ${data}
+Telefone: ${telefone}
+Encomenda de desejo: ${Evento}
 Observações: ${mensagem}
 `
 //encodeURIComponent- serve para transformar um texto em codigo 
