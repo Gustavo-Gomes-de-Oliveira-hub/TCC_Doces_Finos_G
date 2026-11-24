@@ -1,5 +1,4 @@
-// fazer com que a onda suma depois da primeira esseão
-
+// fazer com que a onda suma depois de rolar a página
 const topoFixo = document.querySelector(".topo-fixo");
 
 if (topoFixo) {
@@ -16,49 +15,48 @@ if (topoFixo) {
     atualizarOndaHeader();
 }
 
-// para deixar as informações só aparecerem quando for rolando a tela
-
+// Animações ao rolar na página Sobre
 const sr = ScrollReveal({
     origin: "bottom",
     distance: "35px",
     duration: 800,
     delay: 150,
-    reset: true //permite esconder/resetar ao rolar para cima e reaparecer depois
+    reset: true
 });
 
-// Segunda sessão: história
-sr.reveal("#text-historia", {
+// Banner inicial
+sr.reveal(".titulo-inicio h1", {
+    origin: "top",
+    delay: 100
+});
+
+sr.reveal(".titulo-inicio p", {
+    origin: "bottom",
+    delay: 220
+});
+
+// Segunda sessão: Nossa História (foto à esquerda, texto à direita)
+sr.reveal(".foto-his", {
     origin: "left"
 });
 
-sr.reveal("#imagem-historia", {
+sr.reveal(".contando-historia", {
     origin: "right",
+    delay: 200
+});
+
+// Terceira sessão: Nosso Diferencial (texto à esquerda, foto à direita)
+sr.reveal(".contando-diferencial", {
+    origin: "left"
+});
+
+sr.reveal(".foto-dif", {
+    origin: "right",
+    delay: 200
+});
+
+// Botão de encomenda
+sr.reveal(".bnt-enco", {
+    origin: "bottom",
     delay: 250
-});
-
-// Terceira sessão: mais pedidos (um após o outro)
-sr.reveal(".pedidos h1", {
-    origin: "top"
-});
-
-sr.reveal(".contatiner-pedido", {
-    interval: 150
-});
-
-sr.reveal(".produtos-saber", {
-    delay: 200
-});
-
-// Quinta sessão: mapa e loja
-sr.reveal(".mapa-ft h1", {
-    origin: "top"
-});
-
-sr.reveal(".mapa-loja", {
-    origin: "left"
-});
-
-sr.reveal(".mont-loja", {
-    origin: "right",
-    delay: 200
 });
