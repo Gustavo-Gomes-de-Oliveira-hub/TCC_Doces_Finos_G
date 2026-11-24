@@ -1,0 +1,360 @@
+@import url('https://fonts.cdnfonts.com/css/trocchi-2'); /*FONTE PARA PARAGRAFOS*/
+
+
+@import url('https://fonts.cdnfonts.com/css/lemonada'); /*FONTE PARA SUBTITULOS*/
+
+
+@import url('https://fonts.cdnfonts.com/css/caprasimo'); /*FONTE PARA TITULOS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); /*FONTE PARA botão*/
+
+
+
+
+/* #4b2928 - cor para o header */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* tamanho do corpo da pagina */
+html,
+body{
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+/* fontes estilo de cada un */
+p{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+h3{
+    font-family: "Lemonada", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+h1,
+h2{
+    font-family: "Caprasimo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Container que segura o header e a onda juntos no topo */
+.topo-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* configurações do rodape */
+header{
+    background-color: #77554c;
+    color: white;
+    width: 100%;
+    height: 140px;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 40px;
+    text-align: 10px;
+    align-items: center;
+    transition: height 0.35s ease, padding 0.35s ease;
+}
+
+/* Controla a altura da onda para não tampar a imagem */
+.onda-header {
+    display: block;
+    width: 100%;
+    height: 54px;
+    overflow: hidden;
+    transition: height 0.35s ease, opacity 0.30s ease;
+}
+
+/* Quando passar da primeira sessão, recolhe a onda e deixa o header reto */
+.topo-fixo.onda-escondida .onda-header {
+    height: 0;
+    opacity: 0;
+}
+
+.topo-fixo.onda-escondida header {
+    height: 85px;
+    padding: 8px 40px;
+}
+
+.topo-fixo.onda-escondida .logo-header img {
+    width: 68px;
+    height: 68px;
+    margin-left: 0;
+}
+
+.topo-fixo.onda-escondida nav {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+/* color as paginas no canto direito */
+nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 20px;
+    margin-right: 1%;
+    font-size: 18px;
+    transition: margin-top 0.35s ease, font-size 0.35s ease;
+}
+
+/* colocar cor nos nomes da pagina e tirar o link em baixo */
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* posição e tamanho da logo no rodape */
+.logo-header img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 5px;
+    margin-left: 25%;
+    transition: width 0.35s ease, height 0.35s ease, margin-left 0.35s ease;
+}
+
+.imagem{
+    position: relative; /* Referência para os selos */
+    width: 100%;
+}
+
+/* config sessão 1 interia e deixar espaço*/
+/* sessão produtos caixa pai */
+.produtos{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1dcc3;
+
+    align-items: center;
+    text-align: center;
+    padding-top: 210px; /* Empurra o título para baixo do header fixo */
+    padding-bottom: 60px;
+}
+
+/* caixa pai dos produtos */
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Se a tela for pequena (celular), os cards caem para a linha de baixo */
+    justify-content: center;
+    align-items: stretch; /* Faz TODOS os cards terem exatamente a mesma altura na tela */
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+
+}
+
+/* titulo do catalogo */
+.produtos h1{
+    font-size: 50px;
+    color: #4b2928;
+    margin-bottom: 20px;
+}
+
+
+/* estilo e fonte da caixa filho */
+.card{
+    background-color: #77554c;
+    color: white;
+    padding: 20px;
+    border-radius: 19px;
+    
+    width: 500px; /* Largura fixa ideal para não ficar espremido */
+
+    height: 500px;
+    margin-bottom: 40px;
+    
+    /* Organiza o conteúdo interno em coluna */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Empurra o preço sempre para o final do card */
+    
+    transition: transform 0.3s ease; /* Deixa a animação suave na ida e na volta */
+}
+
+/* imagem dos produtos  dentro das caixas*/
+.card img{
+    width: 100%;
+    height: 300px; /* Altura padrão para todas as fotos ficarem iguais */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* valor dos produtos */
+.card strong {
+    background-color: #502314;
+    border-radius: 9px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* nome do produto */
+.card h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*efeito do card  para subir para cima*/
+.card:hover{
+    transform: translatey(-10px);
+    transition: 1.2s;
+}
+
+/* BOTÃO PARA IR PARA DOCINHOS */
+
+.btn-docinhos{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+
+    margin-top: 40px;
+    margin-bottom:20px;
+
+}
+
+.btn-docinhos  a{
+    padding: 14px clamp(24px, 10vw, 180px);
+    max-width: 100%;
+    width: auto;
+    border-radius: 12px;
+    border: none;
+
+    color: #ffffff;
+    background-color: #a65d2f;
+    font-weight: 800;
+    font-size: clamp(15px, 1.4vw, 18px);
+    cursor: pointer;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.btn-docinhos a:hover{
+    color: #e5a5f7;
+}
+
+/* CONFIG DO FOOTER */
+/* CAIXA PAI TAMANHO E COR E COMO SE COMPORTAR */
+footer{
+    width: 100%;
+    height: 380px;
+    background-color: #4b2928;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* SEPARAR AS INFORMAÇÕES caixa pai */
+.informações-foo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    text-align: center;
+
+    margin-bottom:50px;
+    padding: 10px 40px;
+}
+
+.logoo img{
+    width: 160px;
+    height: 160px;
+    border-radius: 10%;
+
+}
+
+.separar1{
+    display: flex;
+    align-items: center;
+    gap:80px;
+}
+
+.separar2{
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap:80px;
+}
+
+
+/* CONFIG DO ICONES DE CONTATO */
+
+/* coportamento com e espaço entre eles */
+.redes{
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.redes i {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+
+}
+/* efeito quando o cursos passas em cima  */
+.redes i:hover{
+    color: darkgrey;
+    transition: 0.3s;
+    transform: translateY(6px) ;
+}
+
+/* tamanho da fonte do número */
+.redes h2{
+    font-size: 18px;
+    color: #ffffff;
+}
