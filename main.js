@@ -27,28 +27,40 @@ if (topoFixo && primeiraSessao) {
 // 1. Lista com os depoimentos que podem aparecer em primeiro
 const depoimentos = [
     {
-        nome: "JOTAPÊ | MC",
-        arroba: "@jotape4real",
-        foto: "./img/jjjj.jpg",
-        texto: '"Salve, família! Na correria entre estúdio e batalha, eu precisava de um bolo de respeito pra comemorar com a banca e acertei em cheio pedindo aqui. A massa chegou fofinha demais, recheio absurdo de bom e no ponto certo, sem ser enjoativo. Trabalho feito com capricho de verdade e entrega super rápida. Podem pedir sem medo que os caras são protagonistas na confeitaria!"'
+        nome: "Luancy Hair e Visage",
+        arroba: "@luancyhair",
+        foto: "./img/feedback/lu.jpeg",
+        texto: '"Super recomendo 😍😍"'
     },
     {
-        nome: "CAMILA ROCHA",
-        arroba: "@jotape4real",
-        foto: "./img/JOTAPE.jpg",
-        texto: '"Encomendei o bolo de brigadeiro com leite ninho pro aniversário da minha mãe e foi sucesso absoluto na mesa. Todo mundo pediu o contato da doceria!"'
+        nome: "Carol Hatala",
+        arroba: "@carolhatala",
+        foto: "./img/feedback/carol.jpeg",
+        texto: '"Estavam perfeitos!!! Obrigada pelo capricho em forma de doce. 🫶"'
     },
     {
-        nome: "LUCAS MENDES",
-        arroba: "@jotape4real",
-        foto: "./img/JOTAPE.jpg",
-        texto: '"Atendimento super rápido e os doces chegaram bem embalados e frescos. Dá pra sentir o cuidado em cada detalhe da receita."'
+        nome: "HJosy",
+        arroba: "@hsojy_silva",
+        foto: "./img/feedback/josy.jpeg",
+        texto: '"O melhor da região! ❤️👏"'
     },
     {
-        nome: "CIBELE",
-        arroba: "@jotape4real",
-        foto: "./img/jjjj.jpg",
-        texto: '"Atendimento super rápido e os doces chegaram bem embalados e frescos. Dá pra sentir o cuidado em cada detalhe da receita."'
+        nome: "Vanessa Ribeiro",
+        arroba: "@vanribeirop",
+        foto: "./img/feedback/vanessa.jpeg",
+        texto: '"Impecável! Sempre uma delícia os docinhos 😍"'
+    },
+    {
+        nome: "Denise Fialho",
+        arroba: "@denise_fialhoa",
+        foto: "./img/feedback/denise.jpeg",
+        texto: '"Lindos e deliciosos"'
+    },
+    {
+        nome: "Ludymila Nasser",
+        arroba: "@ludymila_nasser",
+        foto: "./img/feedback/ludy.jpeg",
+        texto: '"Tudo perfeito!!! Parabéns, só foi elogios na festa."'
     }
 ];
 

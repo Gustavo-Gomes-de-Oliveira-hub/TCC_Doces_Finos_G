@@ -83,7 +83,7 @@ formulario.addEventListener("submit", function(event){
 let nome = document.getElementById("nome").value
 
 // captura a data do evento de interesse 
-let data = document.getElementById("data").value.trim
+let data = document.getElementById("data").value
 
 // captura o telefone para contato
 let telefone = document.getElementById("telefone").value
@@ -104,10 +104,10 @@ if( telefone.trim() === ""){
 
 const textoWhatsapp =
 `Olá Gostaria  de enviar meu interesse em realizar uma encomenda!!\n\n
-Nome: ${nome}\n\n
-Data: ${data}\n\n
-Telefone: ${telefone}\n\n
-Encomenda de desejo: ${Evento}\n\n
+Nome: ${nome}\n
+Data: ${data}\n
+Telefone: ${telefone}\n
+Encomenda de desejo: ${Evento}\n
 Observações: ${mensagem}
 `
 //encodeURIComponent- serve para transformar um texto em codigo 

@@ -644,11 +644,20 @@ nav a:hover{
 
 /* confi da imagem  */
 .cliente img{
-    width: clamp(190px, 24vw, 340px); /* Adapta sozinha entre telas menores e maiores */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.08);
+    border: 0;
+    box-shadow: none;
+}
+
+.cliente{
+    width: clamp(190px, 24vw, 340px);
     height: clamp(190px, 24vw, 340px);
     border-radius: 50%;
-    display: block;
-    object-fit: cover;
+    overflow: hidden;
+    flex: 0 0 auto;
 }
 
 /* quinta sessão */
