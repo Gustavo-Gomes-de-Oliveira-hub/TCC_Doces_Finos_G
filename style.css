@@ -833,7 +833,7 @@ footer{
     display: flex;
     flex-direction: row;
     overflow-x: auto; /* Permite rolar na horizontal */
-    scroll-snap-type:  x mandatory; /* Faz o card encaixar certinho na tela */
+    scroll-snap-type:  x proximity; /* Faz o card encaixar certinho na tela */
     scroll-behavior: smooth;/* Deixa a rolagem suave */
 
     scrollbar-width: none; /* Esconde a barra de rolagem */
@@ -1402,8 +1402,5 @@ footer{
         min-height: 100svh; /* Mais estável que 100vh na barra de endereço do celular */
     }
 
-    .feedback{
-        margin: 30px;
-    }
 }
 
