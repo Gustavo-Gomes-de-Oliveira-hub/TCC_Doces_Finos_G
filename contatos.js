@@ -86,13 +86,13 @@ let nome = document.getElementById("nome").value
 let data = document.getElementById("data").value.trim
 
 // captura o telefone para contato
-let telefone = document.getElementById("whatsapp").value
+let telefone = document.getElementById("telefone").value
 
 // captura qual é o tipo de evento
 let Evento = document.getElementById("Evento").value
 
 //captura a mensagem de observações do usus
-let mensagem = document.getElementById("Detalhespedido").value
+let mensagem = document.getElementById("mensagem").value
 
 
 if( telefone.trim() === ""){
@@ -106,9 +106,9 @@ const textoWhatsapp =
 `Olá Gostaria  de enviar meu interesse em realizar uma encomenda!!\n\n
 Nome: ${nome}\n\n
 Data: ${data}\n\n
-Telefone: ${whatsapp}\n\n
+Telefone: ${telefone}\n\n
 Encomenda de desejo: ${Evento}\n\n
-Observações: ${Detalhespedido}
+Observações: ${mensagem}
 `
 //encodeURIComponent- serve para transformar um texto em codigo 
 let mensagemCodificada = encodeURIComponent(textoWhatsapp)
