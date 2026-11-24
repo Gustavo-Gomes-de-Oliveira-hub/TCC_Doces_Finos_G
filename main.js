@@ -98,17 +98,16 @@ if (carrosel && slides.length > 0 && dotsContainer) {
 
         if (index === 0) dot.classList.add("ativa");
 
-        // Ao clicar na bolinha, rola o carrossel até o slide correspondente
-        dot.addEventListener("click", () => {
-            const slide = slides[index];
-            const distancia = slide.getBoundingClientRect().left -
-                            carrosel.getBoundingClientRect().left;
+    // Ao clicar na bolinha, rola o carrossel até o slide correspondente
+    dot.addEventListener("click", () => {
+        const slide = slides[index];
+        const destino = slide.offsetLeft - carrosel.offsetLeft;
 
-            carrosel.scrollTo({
-                left: carrosel.scrollLeft + distancia,
-                behavior: "smooth"
-            });
+        carrosel.scrollTo({
+            left: destino,
+             behavior: "smooth"
         });
+    });
 
         dotsContainer.appendChild(dot);
     });
