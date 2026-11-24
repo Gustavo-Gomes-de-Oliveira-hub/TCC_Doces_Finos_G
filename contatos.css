@@ -1,0 +1,580 @@
+
+@import url('https://fonts.cdnfonts.com/css/trocchi-2'); /*FONTE PARA PARAGRAFOS*/
+
+
+@import url('https://fonts.cdnfonts.com/css/lemonada'); /*FONTE PARA SUBTITULOS*/
+
+
+@import url('https://fonts.cdnfonts.com/css/caprasimo'); /*FONTE PARA TITULOS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); /*FONTE PARA botão*/
+
+
+
+
+/* #4b2928 - cor para o header */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* tamanho do corpo da pagina */
+html,
+body{
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    background-color: #f1dcc3;
+    
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(./img/fundo\ contatos.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh; /* Ocupa a tela toda sem exagerar */
+
+}
+
+/* fontes estilo de cada un */
+p{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+h3{
+    font-family: "Lemonada", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1,
+h2{
+    font-family: "Caprasimo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Container que segura o header e a onda juntos no topo */
+.topo-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* configurações do rodape */
+header{
+    background-color: #77554c;
+    color: white;
+    width: 100%;
+    height: 140px;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 40px;
+    text-align: 10px;
+    align-items: center;
+    transition: height 0.35s ease, padding 0.35s ease;
+}
+
+/* Controla a altura da onda para não tampar a imagem */
+.onda-header {
+    display: block;
+    width: 100%;
+    height: 54px;
+    overflow: hidden;
+    transition: height 0.35s ease, opacity 0.30s ease;
+}
+
+/* Quando passar da primeira sessão, recolhe a onda e deixa o header reto */
+.topo-fixo.onda-escondida .onda-header {
+    height: 0;
+    opacity: 0;
+}
+
+.topo-fixo.onda-escondida header {
+    height: 85px;
+    padding: 8px 40px;
+}
+
+.topo-fixo.onda-escondida .logo-header img {
+    width: 68px;
+    height: 68px;
+    margin-left: 0;
+}
+
+.topo-fixo.onda-escondida nav {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+/* color as paginas no canto direito */
+nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 20px;
+    margin-right: 1%;
+    font-size: 18px;
+    transition: margin-top 0.35s ease, font-size 0.35s ease;
+}
+
+/* colocar cor nos nomes da pagina e tirar o link em baixo */
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* posição e tamanho da logo no rodape */
+.logo-header img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 5px;
+    margin-left: 25%;
+    transition: width 0.35s ease, height 0.35s ease, margin-left 0.35s ease;
+}
+
+.imagem{
+    position: relative; /* Referência para os selos */
+    width: 100%;
+}
+
+
+/* config do forumlario */
+
+/* caixa pai */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    width: 1000px;
+    max-width: 92%;
+    margin: 220px auto 60px auto; /* Centraliza na horizontal e dá espaço do header fixo */
+    padding: 24px 20px;
+    background-color: #77554c;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+    border-radius: 22px;
+}
+
+/* cofig das fontes titulos e paragrafros */
+
+/* paragrafo */
+.container p{
+    text-align: center;
+    max-width: 100%;
+    padding: 0 10px;
+
+    /* estilo fonte */
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container h2{
+    margin-top: 20px;
+    color: #f1dcc3;
+    font-size: 28px;
+
+    font-family: "Lemonada", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* foto do topo do formulario */
+/* caixa pai */
+.icone{
+    text-align: center;
+    margin: 10px;
+}
+
+/* foto do icone;logo */
+.icone img{
+    width: 180px;
+    height: 180px;
+    border-radius: 90%;
+}
+
+
+/* estilo de forma individual de cada texto */
+
+/* titulo principal */
+h1{
+    text-align: center;
+    color: #f194c0;
+    font-size: 26px;
+    letter-spacing: 0.5px;
+
+    /* estilo fonte */
+    font-family: "Caprasimo", serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* paragrafos */
+p{
+    text-align: left;
+    color: #f1dcc3;
+    margin-bottom: 8px;
+    line-height: 1.5;
+
+    /* estilo fonte */
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.5;
+}  
+
+/* formulario config*/
+
+/* caixa pai dor formulario */
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+
+/* titulos das caixas em cima */
+label{
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    color: #eec4d8;
+    text-align: left;
+    font-size: 20px;
+
+    /* estilo fonte */
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+
+/* config dos textos das funções */
+input,
+select,
+textarea{
+    padding: 13px;
+    border: 2px solid #eec4d8;
+    color: #4b2928;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 80%;
+    margin-bottom: 28px;
+
+
+}
+
+textarea{
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* config;estilo do botão de enviar o formulario */
+button{
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f24798;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* efeito desse botão */
+
+button:hover{
+    background-color: #b44fd1;
+}
+
+/* CONFIG DO FOOTER */
+/* CAIXA PAI TAMANHO E COR E COMO SE COMPORTAR */
+footer{
+    width: 100%;
+    height: 380px;
+    background-color: #4b2928;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* SEPARAR AS INFORMAÇÕES caixa pai */
+.informações-foo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    text-align: center;
+
+    margin-bottom:50px;
+    padding: 10px 40px;
+}
+
+.logoo img{
+    width: 160px;
+    height: 160px;
+    border-radius: 10%;
+
+}
+
+.separar1{
+    display: flex;
+    align-items: center;
+    gap:80px;
+}
+
+.separar2{
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap:80px;
+}
+
+/* CONFIG DO ICONES DE CONTATO foooter */
+
+/* coportamento com e espaço entre eles */
+.redes{
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.redes i {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+
+}
+/* efeito quando o cursos passas em cima  */
+.redes i:hover{
+    color: darkgrey;
+    transition: 0.3s;
+    transform: translateY(6px) ;
+}
+
+/* tamanho da fonte do número */
+.redes h2{
+    font-size: 18px;
+    color: #ffffff;
+}
+
+
+
+
+/* responsividade */
+
+@media(max-width:480px){
+    .container{
+        padding: 20px;
+    }
+    h1{
+        font: size 22px;
+    }
+}
+
+/* =========================================
+   RESPONSIVIDADE (TABLETS E NOTEBOOKS MENORES)
+   ========================================= */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        min-height: 110px;
+        padding: 12px 20px;
+        gap: 12px;
+    }
+
+    .logo-header img {
+        width: 85px;
+        height: 85px;
+        margin-left: 0;
+    }
+
+    nav {
+        padding-left: 0;
+        margin-right: 0;
+        font-size: 16px;
+    }
+
+    .container {
+        width: 92%;
+        margin-top: 175px;
+    }
+
+    .informações-foo {
+        justify-content: center;
+        gap: 35px;
+        padding: 20px;
+    }
+
+    .separar1,
+    .separar2 {
+        gap: 30px;
+    }
+}
+
+   /* LEMBRAR DE COMENTAR  */
+   /* =========================================
+   RESPONSIVIDADE (CELULARES)
+   ========================================= */
+@media (max-width: 480px) {
+    header,
+    .topo-fixo.onda-escondida header {
+        height: auto;
+        min-height: 0;
+        padding: 10px 12px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logo-header img,
+    .topo-fixo.onda-escondida .logo-header img {
+        width: 65px;
+        height: 65px;
+        margin-left: 0;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .pgs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 5px;
+    }
+
+    .onda-header {
+        height: 32px;
+    }
+
+    .container {
+        width: calc(100% - 24px);
+        max-width: none;
+        margin: 155px auto 30px;
+        padding: 20px 14px;
+        border-radius: 16px;
+    }
+
+    .icone img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .container h2 {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .container p {
+        font-size: 14px;
+    }
+
+    .container p br {
+        display: none;
+    }
+
+    form {
+        padding: 10px 0;
+    }
+
+    label,
+    input,
+    select,
+    textarea {
+        width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        margin-bottom: 18px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    footer {
+        height: auto;
+        padding: 28px 12px;
+        text-align: center;
+    }
+
+    .informações-foo,
+    .separar1,
+    .separar2 {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 24px;
+        padding: 0;
+    }
+
+    .logoo img {
+        width: 110px;
+        height: 110px;
+    }
+
+    footer > h2 {
+        font-size: 13px;
+    }
+}
+
+
+
+
