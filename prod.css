@@ -218,6 +218,7 @@ nav a{
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-size: 25px;
 }
 
 /* nome do produto */
@@ -230,6 +231,8 @@ nav a{
 .card:hover{
     transform: translatey(-10px);
     transition: 1.2s;
+    box-shadow:10px 10px 5px 0px rgba(155, 114, 167, 0.59);
+    background-color: #e5a5f7;
 }
 
 /* BOTÃO PARA IR PARA DOCINHOS */
