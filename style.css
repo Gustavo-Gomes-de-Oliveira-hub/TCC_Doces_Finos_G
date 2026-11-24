@@ -650,6 +650,7 @@ nav a:hover{
     transform: scale(1.08);
     border: 0;
     box-shadow: none;
+    transform: scale(1.18);
 }
 
 .cliente{
@@ -1391,7 +1392,6 @@ footer{
     .sessão-historia,
     .pedidos,
     .feedbacks,
-    .carrosel,
     .mapa-ft,
     footer {
         max-width: 100%;
@@ -1400,6 +1400,10 @@ footer{
 
     .novo-produto {
         min-height: 100svh; /* Mais estável que 100vh na barra de endereço do celular */
+    }
+
+    .feedback{
+        margin: 30px;
     }
 }
 

@@ -100,8 +100,12 @@ if (carrosel && slides.length > 0 && dotsContainer) {
 
         // Ao clicar na bolinha, rola o carrossel até o slide correspondente
         dot.addEventListener("click", () => {
+            const slide = slides[index];
+            const distancia = slide.getBoundingClientRect().left -
+                            carrosel.getBoundingClientRect().left;
+
             carrosel.scrollTo({
-                left: index * carrosel.clientWidth,
+                left: carrosel.scrollLeft + distancia,
                 behavior: "smooth"
             });
         });
