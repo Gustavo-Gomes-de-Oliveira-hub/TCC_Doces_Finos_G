@@ -131,11 +131,6 @@ nav a{
     font-style: normal;
 }
 
-/* efeitos do nav */
-nav a:hover{
-    color: #e7915b;
-    border-bottom: 2px solid #e7915b;
-}
 
 /* posição e tamanho da logo no rodape */
 .logo-header img{
@@ -146,6 +141,12 @@ nav a:hover{
     padding: 5px;
     margin-left: 25%;
     transition: width 0.35s ease, height 0.35s ease, margin-left 0.35s ease;
+}
+
+/* efeitos do nav */
+nav a:hover{
+    color: #e7915b;
+    border-bottom: 2px solid #e7915b;
 }
 
 /* CONFIG DO FOOTER */
