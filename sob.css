@@ -391,246 +391,169 @@ footer{
 
 /* botão encomenda */
 
-.bnt-enco{
-    display: inline-block;
-    align-self: center;
-    margin-top: 30px;
-    border: none;
-
-    border-radius: 14px;
-    padding: 14px clamp(32px, 12vw, 220px);
-    max-width: 90%;
-
-    font-weight: bold;
-    font-size: clamp(16px, 1.5vw, 20px);
-    background-color: #cb6ce6;
-    color: #ffffff;
-    text-align: center;
+/* Botão Encomenda (substitua o seu .bnt-enco atual por este) */
+.bnt-enco {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 30px ;
+    width: fit-content;
+    max-width: 92%;
+    margin: 32px auto 0 auto;
+    border-radius: 14px;
+    background-color: #cb6ce6;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
-
 }
 
-.bnt-enco a{
+.bnt-enco:hover {
+    background-color: #b452cf;
+    transform: translateY(-2px);
+}
+
+.bnt-enco a {
+    display: block;
+    padding: 15px clamp(24px, 6vw, 90px);
     color: #ffffff;
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 800;
-    font-style: normal;
-}
-
-.btn-enc:hover{
-    color: #e5a5f7;
-    text-decoration: none;
-}
-
-
-
-/* Responsividade */
-@media (max-width: 850px) {
-    .segunda-sessao,
-    .diferencial {
-        flex-direction: column;
-        gap: 28px;
-    }
-
-    .foto-his,
-    .foto-dif {
-        flex: none;
-        width: 100%;
-        max-width: 440px;
-    }
-
-    .foto-his img,
-    .foto-dif img {
-        height: 250px;
-    }
-
-    .contando-historia,
-    .contando-diferencial {
-        text-align: center;
-    }
+    font-size: clamp(14px, 1.5vw, 19px);
+    white-space: nowrap;
+    text-align: center;
 }
 
 /* =========================================
-   RESPONSIVIDADE (TABLETS E CELULARES)
+   RESPONSIVIDADE (TABLETS - até 992px)
    ========================================= */
 @media (max-width: 992px) {
     header {
-        padding: 10px 20px;
-    }
-
-    nav {
-        font-size: 15px;
-        gap: 12px;
-        padding-left: 10px;
+        height: 120px;
     }
 
     .logo-header img {
         width: 90px;
         height: 90px;
-        margin-left: 0;
-    }
-
-    .titulo-inicio {
-        padding: 185px 20px 50px 20px;
-    }
-
-    .titulo-inicio h1 {
-        font-size: 40px;
-        line-height: 1.25;
-    }
-
-    .segunda-sessao,
-    .dif {
-        padding: 36px 20px;
-        gap: 28px;
-    }
-
-    .contando-diferencial {
-        width: 100%;
-    }
-
-    .foto-his,
-    .foto-dif {
-        flex: 0 0 320px;
-        height: 320px;
-    }
-
-    footer {
-        height: auto;
-        padding: 40px 20px;
-    }
-
-    .informações-foo {
-        justify-content: center;
-        margin-bottom: 24px;
-        padding: 10px 16px;
-    }
-
-    .separar1,
-    .separar2 {
-        gap: 32px;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
-        padding: 12px 15px;
-    }
-
-    .logo-header img {
-        width: 70px;
-        height: 70px;
-        margin-left: 0;
-    }
-
-    .topo-fixo.onda-escondida header {
-        height: auto;
-        gap: 6px;
-        padding: 8px 15px;
-    }
-
-    .topo-fixo.onda-escondida .logo-header img {
-        width: 50px;
-        height: 50px;
     }
 
     nav {
-        padding-left: 0;
-        margin-right: 0;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .pgs {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    .onda-header {
-        height: 30px;
+        gap: 12px;
     }
 
     .titulo-inicio {
-        margin-top: 0;
-        padding: 175px 15px 45px 15px;
-    }
-
-    .titulo-inicio h1 {
-        font-size: 30px;
-        line-height: 1.25;
-    }
-
-    .titulo-inicio p {
-        font-size: 17px;
-    }
-
-    .nossa-historia {
-        padding: 40px 14px;
+        padding: 190px 20px 55px 20px;
     }
 
     .segunda-sessao,
     .dif {
-        flex-direction: column;
-        padding: 24px 12px;
-        gap: 22px;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 32px;
     }
 
     .contando-historia,
     .contando-diferencial {
-        width: 100%;
         text-align: center;
-    }
-
-    .contando-historia h1,
-    .contando-diferencial h1 {
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-
-    .contando-historia p,
-    .contando-diferencial p {
-        font-size: 16px;
     }
 
     .foto-his,
     .foto-dif {
         flex: none;
         width: 100%;
-        max-width: 340px;
+        max-width: 460px;
+        height: 340px;
+    }
+
+    .informações-foo {
+        justify-content: center;
+        gap: 35px;
+    }
+}
+
+/* =========================================
+   RESPONSIVIDADE (CELULARES - até 600px)
+   ========================================= */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
         height: auto;
-        aspect-ratio: 1 / 1;
+        gap: 6px;
+        padding: 10px 12px;
+    }
+
+    .logo-header img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .topo-fixo.onda-escondida header {
+        height: auto;
+        gap: 4px;
+        padding: 8px 12px;
+    }
+
+    .topo-fixo.onda-escondida .logo-header img {
+        width: 44px;
+        height: 44px;
+    }
+
+    nav {
+        font-size: 14px;
+    }
+
+    .pgs {
+        gap: 6px;
+    }
+
+    nav a {
+        padding: 4px 6px;
+    }
+
+    .onda-header {
+        height: 24px;
+    }
+
+    .titulo-inicio {
+        padding: 165px 16px 45px 16px;
+    }
+
+    .nossa-historia,
+    .diferencial {
+        padding: 45px 16px;
+    }
+
+    .foto-his,
+    .foto-dif {
+        max-width: 100%;
+        height: 260px;
     }
 
     .bnt-enco {
-        width: 100%;
-        max-width: 320px;
-        padding: 14px 20px;
-        font-size: 16px;
+        max-width: 100%;
+        margin-top: 24px;
+    }
+
+    .bnt-enco a {
+        padding: 14px 22px;
+        font-size: 14px;
     }
 
     .informações-foo,
     .separar1,
     .separar2 {
         flex-direction: column;
-        align-items: center;
         gap: 20px;
-        padding: 0;
     }
 
     .logoo img {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
     }
 
-    footer h2 {
-        font-size: 14px;
+    footer > h2 {
+        font-size: 12px;
     }
 }
 
