@@ -139,6 +139,12 @@ nav a{
     font-style: normal;
 }
 
+/* efeitos do nav */
+nav a:hover{
+    color: #e7915b;
+    border-bottom: 2px solid #e7915b;
+}
+
 /* posição e tamanho da logo no rodape */
 .logo-header img{
     width: 120px;
