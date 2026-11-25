@@ -16,49 +16,30 @@ if (topoFixo) {
     atualizarOndaHeader();
 }
 
-// para deixar as informações só aparecerem quando for rolando a tela
 
+// Configuração do ScrollReveal
 const sr = ScrollReveal({
     origin: "bottom",
     distance: "35px",
     duration: 800,
     delay: 150,
-    reset: true //permite esconder/resetar ao rolar para cima e reaparecer depois
+    reset: false
 });
 
-// Segunda sessão: história
-sr.reveal("#text-historia", {
-    origin: "left"
-});
-
-sr.reveal("#imagem-historia", {
-    origin: "right",
-    delay: 250
-});
-
-// Terceira sessão: mais pedidos (um após o outro)
-sr.reveal(".pedidos h1", {
+// Título do catálogo
+sr.reveal(".produtos h1", {
     origin: "top"
 });
 
-sr.reveal(".contatiner-pedido", {
-    interval: 150
+// Animação dos cards de produtos
+sr.reveal(".card", {
+    interval: 150,
+    origin: "bottom"
 });
 
-sr.reveal(".produtos-saber", {
-    delay: 200
+// Botão do catálogo de docinhos
+sr.reveal(".btn-docinhos", {
+    delay: 200,
+    origin: "bottom"
 });
 
-// Quinta sessão: mapa e loja
-sr.reveal(".mapa-ft h1", {
-    origin: "top"
-});
-
-sr.reveal(".mapa-loja", {
-    origin: "left"
-});
-
-sr.reveal(".mont-loja", {
-    origin: "right",
-    delay: 200
-});
