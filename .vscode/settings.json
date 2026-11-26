@@ -39,5 +39,6 @@
         "commandCenter.border": "#15151B4d",
         "__omnify": "upgrade:balanced"
     },
-    "omnify.alien": "upgrade"
+    "omnify.alien": "upgrade",
+    "liveServer.settings.port": 5501
 }
